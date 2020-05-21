@@ -53,15 +53,16 @@ def plot_oneY(arr_acc):
 def plot_one_type(arr_acc, c1, c2, vtype):
     plt.cla()   # 清空之前的数据
     x = range(arr_acc[0][1][:,0].size)
+    y_min, y_max = sys.float_info.max, sys.float_info.min
     for flag, accs in arr_acc:
         plt.plot(x, accs[:,c1], label='train_%s' % flag)
         plt.plot(x, accs[:,c2], label='test__%s' % flag)
-    y_min = min(accs[:,c1].min(), accs[:,c2].min())
-    y_max = max(accs[:,c1].max(), accs[:,c2].max())
-    plt.xticks(range(0, len(x), len(x)//20))                   # 设置x轴显示间隔
-    plt.yticks((y_max-y_min) / 19. * np.arange(20) + y_min)  # 设置x轴显示间隔
-    plt.margins(0)                                             # 图像与坐标轴线不留空
-    plt.subplots_adjust(bottom=0.15)                           # 调节底部空白
+        y_min = min(accs[:,c1].min(), accs[:,c2].min(), y_min)
+        y_max = max(accs[:,c1].max(), accs[:,c2].max(), y_max)
+    plt.xticks(range(0, len(x), len(x)//20))                        # 设置x轴显示间隔
+    plt.yticks((y_max-y_min) / 19. * np.arange(20) + y_min)         # 设置x轴显示间隔
+    plt.margins(0)                                                  # 图像与坐标轴线不留空
+    plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)   # 调节边距空白
     
     plt.title("train curve: " + vtype.upper())
     plt.xlabel("Iteration")
