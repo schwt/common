@@ -1,7 +1,7 @@
-#!/data1/anaconda3/bin/python
+#!/usr/bin/env python
 #!encoding:utf-8
 """
-打印不同参数组的训练曲线，寻找最优参数
+打印不同参数组的训练曲线，以便寻找最优参数
 """
 import sys
 import numpy as np
@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 f_in = sys.argv[1]
 
 def load_data():
-    # buff_train, buff_tests = [], []
     buff = []
     ret = {}    # {flag_depth: [(acc_train, acc_test)]}
     flag = None
@@ -36,6 +35,9 @@ def load_data():
         acc_0  = float(seps[-2].split(':')[1])
         acc_1  = float(seps[-1].split(':')[1])
         buff.append((rmse_0, rmse_1, auc_0, auc_1, acc_0, acc_1))
+    if buff:
+        ret[flag] = np.array(buff)
+        print("depth=%s:\t%s" % (flag, len(buff)))
     print("#load data: %s" % len(ret))
     return sorted(ret.items(), key = lambda x: x[0])
 
@@ -54,15 +56,18 @@ def plot_one_type(arr_acc, c1, c2, vtype):
     for flag, accs in arr_acc:
         plt.plot(x, accs[:,c1], label='train_%s' % flag)
         plt.plot(x, accs[:,c2], label='test__%s' % flag)
-    plt.xticks(range(0, len(x), len(x)//20)) # 设置x轴显示间隔
-    plt.margins(0)                           # 图像与坐标轴线不留空
-    plt.subplots_adjust(bottom=0.15)         # 调节底部空白
+    y_min = min(accs[:,c1].min(), accs[:,c2].min())
+    y_max = max(accs[:,c1].max(), accs[:,c2].max())
+    plt.xticks(range(0, len(x), len(x)//20))                   # 设置x轴显示间隔
+    plt.yticks((y_max-y_min) / 19. * np.arange(20) + y_min)  # 设置x轴显示间隔
+    plt.margins(0)                                             # 图像与坐标轴线不留空
+    plt.subplots_adjust(bottom=0.15)                           # 调节底部空白
     
     plt.title("train curve: " + vtype.upper())
     plt.xlabel("Iteration")
     plt.ylabel(vtype.title())
     plt.legend(loc=1)
-    plt.grid(True)
+    plt.grid(True, alpha=0.5)
     # plt.show()
     
     fig = plt.gcf()
