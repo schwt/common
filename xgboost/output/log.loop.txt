@@ -1,334 +1,385 @@
-[2020-05-19 22:27:54] begin...
-[2020-05-19 22:27:54] #cols: 135
-[2020-05-19 22:27:54] load ./data/train.csv ...
-[22:30:59] 27673858x135 matrix with 3735970830 entries loaded from ./data/train.csv?format=csv&label_column=0
-[2020-05-19 22:31:06] # train set: 27673858
-[2020-05-19 22:31:06] # train   +: (19.18%)   5308447
-[2020-05-19 22:31:06] # train   -: (80.82%)   22365411
-[2020-05-19 22:31:06] # train -/+: 4.21
-[2020-05-19 22:31:06] load ./data/test.csv ...
-[22:31:53] 7061534x135 matrix with 953307090 entries loaded from ./data/test.csv?format=csv&label_column=0
-[2020-05-19 22:31:55] # tests set: 7061534
-[2020-05-19 22:31:55] # tests   +: ( 9.84%)   694515
-[2020-05-19 22:31:55] # tests   -: (90.16%)   6367019
-[2020-05-19 22:31:55] # tests -/+: 9.17
-[2020-05-19 22:31:55] param:
-	{'booster': 'gbtree', 'max_depth': 7, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 2}
-	num_round: 50
-[0]	N-rmse:0.47240	N-auc:0.91315	N-error:0.13979	E-rmse:0.47637	E-auc:0.80171	E-error:0.19201	N-mAcc:83.25600	E-mAcc:69.86100
-[1]	N-rmse:0.44350	N-auc:0.91975	N-error:0.13983	E-rmse:0.45554	E-auc:0.81886	E-error:0.21116	N-mAcc:84.16800	E-mAcc:72.75000
-[2]	N-rmse:0.42209	N-auc:0.92121	N-error:0.13709	E-rmse:0.43901	E-auc:0.82480	E-error:0.20502	N-mAcc:84.46900	E-mAcc:73.06800
-[3]	N-rmse:0.40346	N-auc:0.92273	N-error:0.13706	E-rmse:0.42444	E-auc:0.82366	E-error:0.20138	N-mAcc:84.34300	E-mAcc:73.09200
-[4]	N-rmse:0.38679	N-auc:0.92359	N-error:0.13784	E-rmse:0.41237	E-auc:0.82426	E-error:0.20300	N-mAcc:84.43400	E-mAcc:73.32300
-[5]	N-rmse:0.37290	N-auc:0.92451	N-error:0.13656	E-rmse:0.40272	E-auc:0.82808	E-error:0.20422	N-mAcc:84.56400	E-mAcc:73.69600
-[6]	N-rmse:0.36147	N-auc:0.92549	N-error:0.13509	E-rmse:0.39473	E-auc:0.83323	E-error:0.20218	N-mAcc:84.69100	E-mAcc:73.85500
-[7]	N-rmse:0.35085	N-auc:0.92574	N-error:0.13488	E-rmse:0.38792	E-auc:0.83176	E-error:0.20396	N-mAcc:84.69600	E-mAcc:73.71200
-[8]	N-rmse:0.34268	N-auc:0.92640	N-error:0.13324	E-rmse:0.38178	E-auc:0.83466	E-error:0.20133	N-mAcc:84.74000	E-mAcc:73.90300
-[9]	N-rmse:0.33514	N-auc:0.92702	N-error:0.13182	E-rmse:0.37701	E-auc:0.83453	E-error:0.19906	N-mAcc:84.82600	E-mAcc:73.85300
-[10]	N-rmse:0.32893	N-auc:0.92762	N-error:0.13121	E-rmse:0.37350	E-auc:0.83383	E-error:0.19954	N-mAcc:84.85400	E-mAcc:73.74000
-[11]	N-rmse:0.32356	N-auc:0.92817	N-error:0.13089	E-rmse:0.36963	E-auc:0.83477	E-error:0.19860	N-mAcc:84.91100	E-mAcc:73.82200
-[12]	N-rmse:0.31941	N-auc:0.92853	N-error:0.13044	E-rmse:0.36608	E-auc:0.83723	E-error:0.19721	N-mAcc:84.92500	E-mAcc:73.95800
-[13]	N-rmse:0.31551	N-auc:0.92924	N-error:0.12911	E-rmse:0.36484	E-auc:0.83752	E-error:0.19617	N-mAcc:85.06900	E-mAcc:74.13000
-[14]	N-rmse:0.31278	N-auc:0.92980	N-error:0.12899	E-rmse:0.36259	E-auc:0.83922	E-error:0.19559	N-mAcc:85.07600	E-mAcc:74.23100
-[15]	N-rmse:0.30963	N-auc:0.93039	N-error:0.12893	E-rmse:0.36056	E-auc:0.83959	E-error:0.19452	N-mAcc:85.07800	E-mAcc:74.32400
-[16]	N-rmse:0.30773	N-auc:0.93073	N-error:0.12871	E-rmse:0.35899	E-auc:0.84088	E-error:0.19460	N-mAcc:85.12000	E-mAcc:74.39600
-[17]	N-rmse:0.30498	N-auc:0.93133	N-error:0.12756	E-rmse:0.35899	E-auc:0.84014	E-error:0.19493	N-mAcc:85.19900	E-mAcc:74.46200
-[18]	N-rmse:0.30340	N-auc:0.93156	N-error:0.12720	E-rmse:0.35826	E-auc:0.84125	E-error:0.19505	N-mAcc:85.20700	E-mAcc:74.53500
-[19]	N-rmse:0.30163	N-auc:0.93226	N-error:0.12629	E-rmse:0.35773	E-auc:0.84039	E-error:0.19293	N-mAcc:85.28800	E-mAcc:74.49000
-[20]	N-rmse:0.29975	N-auc:0.93244	N-error:0.12593	E-rmse:0.35657	E-auc:0.84278	E-error:0.19149	N-mAcc:85.30800	E-mAcc:74.70700
-[21]	N-rmse:0.29882	N-auc:0.93275	N-error:0.12564	E-rmse:0.35593	E-auc:0.84463	E-error:0.19079	N-mAcc:85.33900	E-mAcc:74.90300
-[22]	N-rmse:0.29745	N-auc:0.93355	N-error:0.12524	E-rmse:0.35699	E-auc:0.84352	E-error:0.19073	N-mAcc:85.42900	E-mAcc:74.92400
-[23]	N-rmse:0.29613	N-auc:0.93437	N-error:0.12381	E-rmse:0.35663	E-auc:0.84378	E-error:0.18899	N-mAcc:85.56400	E-mAcc:74.95700
-[24]	N-rmse:0.29510	N-auc:0.93489	N-error:0.12363	E-rmse:0.35606	E-auc:0.84463	E-error:0.18861	N-mAcc:85.60500	E-mAcc:75.02200
-[25]	N-rmse:0.29439	N-auc:0.93506	N-error:0.12342	E-rmse:0.35590	E-auc:0.84468	E-error:0.18874	N-mAcc:85.62200	E-mAcc:75.03600
-[26]	N-rmse:0.29372	N-auc:0.93540	N-error:0.12320	E-rmse:0.35582	E-auc:0.84508	E-error:0.18879	N-mAcc:85.65400	E-mAcc:75.05600
-[27]	N-rmse:0.29303	N-auc:0.93574	N-error:0.12288	E-rmse:0.35625	E-auc:0.84498	E-error:0.18901	N-mAcc:85.69600	E-mAcc:75.09500
-[28]	N-rmse:0.29247	N-auc:0.93601	N-error:0.12236	E-rmse:0.35563	E-auc:0.84580	E-error:0.18851	N-mAcc:85.71400	E-mAcc:75.12100
-[29]	N-rmse:0.29191	N-auc:0.93627	N-error:0.12211	E-rmse:0.35555	E-auc:0.84597	E-error:0.18876	N-mAcc:85.75600	E-mAcc:75.12800
-[30]	N-rmse:0.29146	N-auc:0.93652	N-error:0.12198	E-rmse:0.35414	E-auc:0.84643	E-error:0.18766	N-mAcc:85.78600	E-mAcc:75.04500
-[31]	N-rmse:0.29098	N-auc:0.93676	N-error:0.12172	E-rmse:0.35457	E-auc:0.84624	E-error:0.18713	N-mAcc:85.80600	E-mAcc:75.07400
-[32]	N-rmse:0.29051	N-auc:0.93710	N-error:0.12147	E-rmse:0.35467	E-auc:0.84569	E-error:0.18716	N-mAcc:85.84300	E-mAcc:75.08000
-[33]	N-rmse:0.29010	N-auc:0.93735	N-error:0.12100	E-rmse:0.35441	E-auc:0.84622	E-error:0.18695	N-mAcc:85.86600	E-mAcc:75.09600
-[34]	N-rmse:0.28968	N-auc:0.93765	N-error:0.12065	E-rmse:0.35479	E-auc:0.84596	E-error:0.18707	N-mAcc:85.89600	E-mAcc:75.09000
-[35]	N-rmse:0.28930	N-auc:0.93790	N-error:0.12043	E-rmse:0.35597	E-auc:0.84495	E-error:0.18725	N-mAcc:85.92100	E-mAcc:75.13500
-[36]	N-rmse:0.28862	N-auc:0.93828	N-error:0.11996	E-rmse:0.35587	E-auc:0.84584	E-error:0.18702	N-mAcc:85.95700	E-mAcc:75.19800
-[37]	N-rmse:0.28825	N-auc:0.93865	N-error:0.11968	E-rmse:0.35588	E-auc:0.84634	E-error:0.18701	N-mAcc:85.99700	E-mAcc:75.23700
-[38]	N-rmse:0.28787	N-auc:0.93888	N-error:0.11911	E-rmse:0.35618	E-auc:0.84630	E-error:0.18684	N-mAcc:86.02300	E-mAcc:75.22300
-[39]	N-rmse:0.28744	N-auc:0.93926	N-error:0.11862	E-rmse:0.35649	E-auc:0.84656	E-error:0.18698	N-mAcc:86.07000	E-mAcc:75.24300
-[40]	N-rmse:0.28711	N-auc:0.93945	N-error:0.11823	E-rmse:0.35637	E-auc:0.84697	E-error:0.18689	N-mAcc:86.08700	E-mAcc:75.25000
-[41]	N-rmse:0.28662	N-auc:0.93980	N-error:0.11795	E-rmse:0.35671	E-auc:0.84574	E-error:0.18738	N-mAcc:86.12600	E-mAcc:75.16500
-[42]	N-rmse:0.28631	N-auc:0.94002	N-error:0.11762	E-rmse:0.35675	E-auc:0.84607	E-error:0.18732	N-mAcc:86.16000	E-mAcc:75.19200
-[43]	N-rmse:0.28607	N-auc:0.94019	N-error:0.11749	E-rmse:0.35655	E-auc:0.84608	E-error:0.18715	N-mAcc:86.16700	E-mAcc:75.18100
-[44]	N-rmse:0.28577	N-auc:0.94040	N-error:0.11719	E-rmse:0.35678	E-auc:0.84608	E-error:0.18708	N-mAcc:86.18900	E-mAcc:75.18300
-[45]	N-rmse:0.28481	N-auc:0.94102	N-error:0.11626	E-rmse:0.35681	E-auc:0.84515	E-error:0.18701	N-mAcc:86.27700	E-mAcc:75.19800
-[46]	N-rmse:0.28448	N-auc:0.94133	N-error:0.11591	E-rmse:0.35668	E-auc:0.84526	E-error:0.18687	N-mAcc:86.31100	E-mAcc:75.20300
-[47]	N-rmse:0.28420	N-auc:0.94156	N-error:0.11565	E-rmse:0.35672	E-auc:0.84539	E-error:0.18708	N-mAcc:86.33900	E-mAcc:75.20500
-[48]	N-rmse:0.28372	N-auc:0.94190	N-error:0.11524	E-rmse:0.35685	E-auc:0.84462	E-error:0.18717	N-mAcc:86.36500	E-mAcc:75.14400
-[49]	N-rmse:0.28308	N-auc:0.94234	N-error:0.11468	E-rmse:0.35650	E-auc:0.84472	E-error:0.18603	N-mAcc:86.40800	E-mAcc:75.16400
-[2020-05-20 00:02:32] (01:30:37) train done.
-[2020-05-20 00:02:33] predict train:
-[2020-05-20 00:02:34]   accuracy   +: 82.962%
-[2020-05-20 00:02:34]   accuracy   -: 89.854%
-[2020-05-20 00:02:34]   accuracy avg: 86.408%
-[2020-05-20 00:02:34]   accuracy ALL: 88.532%
-[2020-05-20 00:02:34] predict test:
-[2020-05-20 00:02:34]   accuracy   +: 67.405%
-[2020-05-20 00:02:34]   accuracy   -: 82.923%
-[2020-05-20 00:02:34]   accuracy avg: 75.164%
-[2020-05-20 00:02:34]   accuracy ALL: 81.397%
-[2020-05-20 00:02:34] param:
-	{'booster': 'gbtree', 'max_depth': 8, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 2}
-	num_round: 50
-[0]	N-rmse:0.46913	N-auc:0.92080	N-error:0.13628	E-rmse:0.47588	E-auc:0.80136	E-error:0.19857	N-mAcc:84.33800	E-mAcc:72.49400
-[1]	N-rmse:0.44294	N-auc:0.92608	N-error:0.13128	E-rmse:0.45461	E-auc:0.81642	E-error:0.19377	N-mAcc:84.88000	E-mAcc:73.10900
-[2]	N-rmse:0.42014	N-auc:0.92753	N-error:0.12934	E-rmse:0.43774	E-auc:0.81995	E-error:0.18889	N-mAcc:85.08500	E-mAcc:73.73500
-[3]	N-rmse:0.40032	N-auc:0.92862	N-error:0.12881	E-rmse:0.42453	E-auc:0.81597	E-error:0.19794	N-mAcc:85.22900	E-mAcc:73.53200
-[4]	N-rmse:0.38362	N-auc:0.92914	N-error:0.12770	E-rmse:0.41211	E-auc:0.81771	E-error:0.19257	N-mAcc:85.25200	E-mAcc:73.77800
-[5]	N-rmse:0.36964	N-auc:0.93023	N-error:0.12709	E-rmse:0.40145	E-auc:0.81879	E-error:0.19279	N-mAcc:85.30400	E-mAcc:74.05300
-[6]	N-rmse:0.35772	N-auc:0.93103	N-error:0.12521	E-rmse:0.39439	E-auc:0.82596	E-error:0.19281	N-mAcc:85.39300	E-mAcc:74.16300
-[7]	N-rmse:0.34664	N-auc:0.93131	N-error:0.12407	E-rmse:0.38861	E-auc:0.82845	E-error:0.19319	N-mAcc:85.47300	E-mAcc:74.14000
-[8]	N-rmse:0.33797	N-auc:0.93206	N-error:0.12299	E-rmse:0.38381	E-auc:0.82852	E-error:0.19361	N-mAcc:85.53800	E-mAcc:74.03100
-[9]	N-rmse:0.33004	N-auc:0.93263	N-error:0.12251	E-rmse:0.37956	E-auc:0.82798	E-error:0.19403	N-mAcc:85.58000	E-mAcc:74.07400
-[10]	N-rmse:0.32381	N-auc:0.93302	N-error:0.12218	E-rmse:0.37589	E-auc:0.82827	E-error:0.19394	N-mAcc:85.62000	E-mAcc:74.15500
-[11]	N-rmse:0.31801	N-auc:0.93432	N-error:0.12162	E-rmse:0.37294	E-auc:0.82987	E-error:0.19435	N-mAcc:85.66900	E-mAcc:74.15000
-[12]	N-rmse:0.31320	N-auc:0.93477	N-error:0.12118	E-rmse:0.37196	E-auc:0.82858	E-error:0.19534	N-mAcc:85.69400	E-mAcc:74.25000
-[13]	N-rmse:0.30924	N-auc:0.93518	N-error:0.12077	E-rmse:0.37022	E-auc:0.82909	E-error:0.19473	N-mAcc:85.72700	E-mAcc:74.34200
-[14]	N-rmse:0.30630	N-auc:0.93566	N-error:0.12054	E-rmse:0.36722	E-auc:0.83236	E-error:0.19339	N-mAcc:85.76500	E-mAcc:74.44500
-[15]	N-rmse:0.30322	N-auc:0.93594	N-error:0.12010	E-rmse:0.36553	E-auc:0.83344	E-error:0.19330	N-mAcc:85.80400	E-mAcc:74.43400
-[16]	N-rmse:0.30118	N-auc:0.93661	N-error:0.12000	E-rmse:0.36426	E-auc:0.83361	E-error:0.19251	N-mAcc:85.83700	E-mAcc:74.49800
-[17]	N-rmse:0.29853	N-auc:0.93694	N-error:0.11968	E-rmse:0.36341	E-auc:0.83440	E-error:0.19228	N-mAcc:85.86300	E-mAcc:74.52000
-[18]	N-rmse:0.29698	N-auc:0.93725	N-error:0.11930	E-rmse:0.36294	E-auc:0.83505	E-error:0.19164	N-mAcc:85.88800	E-mAcc:74.61200
-[19]	N-rmse:0.29562	N-auc:0.93751	N-error:0.11914	E-rmse:0.36213	E-auc:0.83681	E-error:0.19095	N-mAcc:85.89400	E-mAcc:74.69000
-[20]	N-rmse:0.29336	N-auc:0.93800	N-error:0.11847	E-rmse:0.36210	E-auc:0.83593	E-error:0.19002	N-mAcc:85.95000	E-mAcc:74.68000
-[21]	N-rmse:0.29222	N-auc:0.93826	N-error:0.11819	E-rmse:0.36193	E-auc:0.83600	E-error:0.18981	N-mAcc:86.03800	E-mAcc:74.79800
-[22]	N-rmse:0.29102	N-auc:0.93896	N-error:0.11778	E-rmse:0.36166	E-auc:0.83689	E-error:0.18996	N-mAcc:86.09900	E-mAcc:74.83600
-[23]	N-rmse:0.28991	N-auc:0.93958	N-error:0.11723	E-rmse:0.36134	E-auc:0.83729	E-error:0.18912	N-mAcc:86.16000	E-mAcc:74.79900
-[24]	N-rmse:0.28861	N-auc:0.94023	N-error:0.11664	E-rmse:0.36201	E-auc:0.83608	E-error:0.18936	N-mAcc:86.24900	E-mAcc:74.84900
-[25]	N-rmse:0.28769	N-auc:0.94056	N-error:0.11636	E-rmse:0.36196	E-auc:0.83629	E-error:0.18908	N-mAcc:86.25800	E-mAcc:74.85700
-[26]	N-rmse:0.28698	N-auc:0.94087	N-error:0.11589	E-rmse:0.36165	E-auc:0.83707	E-error:0.18865	N-mAcc:86.29000	E-mAcc:74.87800
-[27]	N-rmse:0.28614	N-auc:0.94124	N-error:0.11537	E-rmse:0.36149	E-auc:0.83759	E-error:0.18851	N-mAcc:86.33700	E-mAcc:74.90000
-[28]	N-rmse:0.28547	N-auc:0.94163	N-error:0.11496	E-rmse:0.36142	E-auc:0.83796	E-error:0.18871	N-mAcc:86.39400	E-mAcc:74.91900
-[29]	N-rmse:0.28472	N-auc:0.94209	N-error:0.11454	E-rmse:0.36189	E-auc:0.83805	E-error:0.18923	N-mAcc:86.42900	E-mAcc:74.94900
-[30]	N-rmse:0.28414	N-auc:0.94237	N-error:0.11441	E-rmse:0.36160	E-auc:0.83710	E-error:0.18988	N-mAcc:86.46900	E-mAcc:74.90600
-[31]	N-rmse:0.28332	N-auc:0.94291	N-error:0.11388	E-rmse:0.36155	E-auc:0.83686	E-error:0.18973	N-mAcc:86.50300	E-mAcc:74.92900
-[32]	N-rmse:0.28298	N-auc:0.94316	N-error:0.11380	E-rmse:0.36150	E-auc:0.83715	E-error:0.18948	N-mAcc:86.51700	E-mAcc:74.95600
-[33]	N-rmse:0.28272	N-auc:0.94326	N-error:0.11361	E-rmse:0.36115	E-auc:0.83763	E-error:0.18906	N-mAcc:86.53000	E-mAcc:74.97200
-[34]	N-rmse:0.28234	N-auc:0.94357	N-error:0.11338	E-rmse:0.36110	E-auc:0.83798	E-error:0.18880	N-mAcc:86.56800	E-mAcc:75.02000
-[35]	N-rmse:0.28189	N-auc:0.94397	N-error:0.11317	E-rmse:0.36115	E-auc:0.83833	E-error:0.18923	N-mAcc:86.60600	E-mAcc:75.02900
-[36]	N-rmse:0.28137	N-auc:0.94428	N-error:0.11293	E-rmse:0.36138	E-auc:0.83856	E-error:0.18949	N-mAcc:86.64500	E-mAcc:75.04900
-[37]	N-rmse:0.28089	N-auc:0.94459	N-error:0.11245	E-rmse:0.36179	E-auc:0.83863	E-error:0.19006	N-mAcc:86.68300	E-mAcc:75.04800
-[38]	N-rmse:0.28064	N-auc:0.94472	N-error:0.11217	E-rmse:0.36152	E-auc:0.83919	E-error:0.18977	N-mAcc:86.70000	E-mAcc:75.06300
-[39]	N-rmse:0.28023	N-auc:0.94505	N-error:0.11195	E-rmse:0.36301	E-auc:0.83799	E-error:0.19051	N-mAcc:86.73000	E-mAcc:75.09800
-[40]	N-rmse:0.27995	N-auc:0.94519	N-error:0.11171	E-rmse:0.36320	E-auc:0.83781	E-error:0.19065	N-mAcc:86.74400	E-mAcc:75.08500
-[41]	N-rmse:0.27969	N-auc:0.94531	N-error:0.11151	E-rmse:0.36287	E-auc:0.83775	E-error:0.18979	N-mAcc:86.75900	E-mAcc:75.09800
-[42]	N-rmse:0.27946	N-auc:0.94554	N-error:0.11141	E-rmse:0.36343	E-auc:0.83762	E-error:0.19000	N-mAcc:86.77600	E-mAcc:75.11200
-[43]	N-rmse:0.27884	N-auc:0.94593	N-error:0.11083	E-rmse:0.36377	E-auc:0.83672	E-error:0.19021	N-mAcc:86.83200	E-mAcc:75.06900
-[44]	N-rmse:0.27856	N-auc:0.94620	N-error:0.11062	E-rmse:0.36411	E-auc:0.83660	E-error:0.19034	N-mAcc:86.86000	E-mAcc:75.07100
-[45]	N-rmse:0.27818	N-auc:0.94646	N-error:0.11024	E-rmse:0.36429	E-auc:0.83690	E-error:0.19005	N-mAcc:86.89200	E-mAcc:75.09700
-[46]	N-rmse:0.27726	N-auc:0.94702	N-error:0.10943	E-rmse:0.36420	E-auc:0.83581	E-error:0.18969	N-mAcc:86.96300	E-mAcc:75.07400
-[47]	N-rmse:0.27706	N-auc:0.94714	N-error:0.10923	E-rmse:0.36380	E-auc:0.83614	E-error:0.18916	N-mAcc:86.97800	E-mAcc:75.07900
-[48]	N-rmse:0.27663	N-auc:0.94740	N-error:0.10894	E-rmse:0.36440	E-auc:0.83513	E-error:0.18950	N-mAcc:87.00500	E-mAcc:75.05700
-[49]	N-rmse:0.27631	N-auc:0.94762	N-error:0.10866	E-rmse:0.36427	E-auc:0.83506	E-error:0.18933	N-mAcc:87.03700	E-mAcc:75.09500
-[2020-05-20 01:46:19] (01:43:45) train done.
-[2020-05-20 01:46:19] predict train:
-[2020-05-20 01:46:20]   accuracy   +: 83.636%
-[2020-05-20 01:46:20]   accuracy   -: 90.439%
-[2020-05-20 01:46:20]   accuracy avg: 87.037%
-[2020-05-20 01:46:20]   accuracy ALL: 89.134%
-[2020-05-20 01:46:20] predict test:
-[2020-05-20 01:46:20]   accuracy   +: 67.661%
-[2020-05-20 01:46:20]   accuracy   -: 82.529%
-[2020-05-20 01:46:20]   accuracy avg: 75.095%
-[2020-05-20 01:46:20]   accuracy ALL: 81.067%
-[2020-05-20 01:46:20] param:
-	{'booster': 'gbtree', 'max_depth': 9, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 2}
-	num_round: 50
-[0]	N-rmse:0.46834	N-auc:0.92701	N-error:0.12526	E-rmse:0.47611	E-auc:0.79710	E-error:0.19308	N-mAcc:84.27900	E-mAcc:71.82300
-[1]	N-rmse:0.44108	N-auc:0.93210	N-error:0.12333	E-rmse:0.45593	E-auc:0.80575	E-error:0.20525	N-mAcc:85.32800	E-mAcc:73.06100
-[2]	N-rmse:0.41803	N-auc:0.93393	N-error:0.12087	E-rmse:0.43875	E-auc:0.81046	E-error:0.19400	N-mAcc:85.54300	E-mAcc:73.64300
-[3]	N-rmse:0.39694	N-auc:0.93519	N-error:0.11942	E-rmse:0.42562	E-auc:0.80895	E-error:0.19648	N-mAcc:85.68900	E-mAcc:73.68200
-[4]	N-rmse:0.38047	N-auc:0.93593	N-error:0.11856	E-rmse:0.41326	E-auc:0.81203	E-error:0.19221	N-mAcc:85.77900	E-mAcc:73.71900
-[5]	N-rmse:0.36606	N-auc:0.93641	N-error:0.11865	E-rmse:0.40395	E-auc:0.81039	E-error:0.19087	N-mAcc:85.85600	E-mAcc:73.94300
-[6]	N-rmse:0.35319	N-auc:0.93728	N-error:0.11768	E-rmse:0.39721	E-auc:0.81880	E-error:0.19310	N-mAcc:85.95700	E-mAcc:74.07800
-[7]	N-rmse:0.34203	N-auc:0.93766	N-error:0.11736	E-rmse:0.39121	E-auc:0.81898	E-error:0.19555	N-mAcc:85.98900	E-mAcc:73.94200
-[8]	N-rmse:0.33350	N-auc:0.93834	N-error:0.11711	E-rmse:0.38646	E-auc:0.81864	E-error:0.19495	N-mAcc:86.07500	E-mAcc:74.07500
-[9]	N-rmse:0.32456	N-auc:0.93889	N-error:0.11629	E-rmse:0.38363	E-auc:0.81807	E-error:0.19779	N-mAcc:86.14300	E-mAcc:74.05800
-[10]	N-rmse:0.31862	N-auc:0.93915	N-error:0.11615	E-rmse:0.38038	E-auc:0.81908	E-error:0.19774	N-mAcc:86.14600	E-mAcc:74.08600
-[11]	N-rmse:0.31291	N-auc:0.93969	N-error:0.11536	E-rmse:0.37861	E-auc:0.81942	E-error:0.19796	N-mAcc:86.22000	E-mAcc:74.26400
-[12]	N-rmse:0.30755	N-auc:0.94027	N-error:0.11499	E-rmse:0.37608	E-auc:0.82018	E-error:0.19569	N-mAcc:86.25900	E-mAcc:74.37000
-[13]	N-rmse:0.30340	N-auc:0.94097	N-error:0.11431	E-rmse:0.37386	E-auc:0.82357	E-error:0.19560	N-mAcc:86.31800	E-mAcc:74.43300
-[14]	N-rmse:0.30068	N-auc:0.94125	N-error:0.11402	E-rmse:0.37194	E-auc:0.82552	E-error:0.19405	N-mAcc:86.41900	E-mAcc:74.60100
-[15]	N-rmse:0.29752	N-auc:0.94145	N-error:0.11377	E-rmse:0.37044	E-auc:0.82734	E-error:0.19373	N-mAcc:86.43700	E-mAcc:74.65800
-[16]	N-rmse:0.29468	N-auc:0.94211	N-error:0.11311	E-rmse:0.37000	E-auc:0.82635	E-error:0.19426	N-mAcc:86.53400	E-mAcc:74.61800
-[17]	N-rmse:0.29206	N-auc:0.94255	N-error:0.11260	E-rmse:0.36860	E-auc:0.82663	E-error:0.19323	N-mAcc:86.58600	E-mAcc:74.65500
-[18]	N-rmse:0.29019	N-auc:0.94296	N-error:0.11228	E-rmse:0.36826	E-auc:0.82711	E-error:0.19271	N-mAcc:86.62000	E-mAcc:74.75800
-[19]	N-rmse:0.28856	N-auc:0.94330	N-error:0.11201	E-rmse:0.36727	E-auc:0.82841	E-error:0.19212	N-mAcc:86.63800	E-mAcc:74.78700
-[20]	N-rmse:0.28675	N-auc:0.94347	N-error:0.11183	E-rmse:0.36724	E-auc:0.82836	E-error:0.19317	N-mAcc:86.65200	E-mAcc:74.72400
-[21]	N-rmse:0.28553	N-auc:0.94376	N-error:0.11157	E-rmse:0.36697	E-auc:0.82943	E-error:0.19263	N-mAcc:86.69300	E-mAcc:74.85500
-[22]	N-rmse:0.28456	N-auc:0.94395	N-error:0.11125	E-rmse:0.36679	E-auc:0.83005	E-error:0.19227	N-mAcc:86.71500	E-mAcc:74.88800
-[23]	N-rmse:0.28320	N-auc:0.94437	N-error:0.11071	E-rmse:0.36689	E-auc:0.82925	E-error:0.19331	N-mAcc:86.77300	E-mAcc:74.81500
-[24]	N-rmse:0.28211	N-auc:0.94501	N-error:0.11023	E-rmse:0.36632	E-auc:0.83071	E-error:0.19303	N-mAcc:86.83700	E-mAcc:74.88600
-[25]	N-rmse:0.28107	N-auc:0.94551	N-error:0.10978	E-rmse:0.36621	E-auc:0.83111	E-error:0.19291	N-mAcc:86.89500	E-mAcc:74.87900
-[26]	N-rmse:0.28012	N-auc:0.94607	N-error:0.10927	E-rmse:0.36467	E-auc:0.83070	E-error:0.19252	N-mAcc:86.96300	E-mAcc:74.75200
-[27]	N-rmse:0.27942	N-auc:0.94632	N-error:0.10909	E-rmse:0.36464	E-auc:0.83077	E-error:0.19245	N-mAcc:86.98200	E-mAcc:74.77900
-[28]	N-rmse:0.27890	N-auc:0.94658	N-error:0.10887	E-rmse:0.36457	E-auc:0.83151	E-error:0.19306	N-mAcc:87.01500	E-mAcc:74.77200
-[29]	N-rmse:0.27790	N-auc:0.94713	N-error:0.10823	E-rmse:0.36462	E-auc:0.82994	E-error:0.19169	N-mAcc:87.09400	E-mAcc:74.74600
-[30]	N-rmse:0.27752	N-auc:0.94728	N-error:0.10810	E-rmse:0.36427	E-auc:0.83077	E-error:0.19119	N-mAcc:87.10600	E-mAcc:74.78600
-[31]	N-rmse:0.27720	N-auc:0.94744	N-error:0.10791	E-rmse:0.36394	E-auc:0.83130	E-error:0.19090	N-mAcc:87.12500	E-mAcc:74.79200
-[32]	N-rmse:0.27670	N-auc:0.94780	N-error:0.10768	E-rmse:0.36454	E-auc:0.83142	E-error:0.19146	N-mAcc:87.15000	E-mAcc:74.81100
-[33]	N-rmse:0.27638	N-auc:0.94800	N-error:0.10752	E-rmse:0.36439	E-auc:0.83179	E-error:0.19143	N-mAcc:87.17200	E-mAcc:74.80900
-[34]	N-rmse:0.27597	N-auc:0.94829	N-error:0.10739	E-rmse:0.36496	E-auc:0.83155	E-error:0.19187	N-mAcc:87.19800	E-mAcc:74.81700
-[35]	N-rmse:0.27554	N-auc:0.94859	N-error:0.10714	E-rmse:0.36491	E-auc:0.83194	E-error:0.19200	N-mAcc:87.22700	E-mAcc:74.81900
-[36]	N-rmse:0.27506	N-auc:0.94896	N-error:0.10678	E-rmse:0.36579	E-auc:0.83163	E-error:0.19263	N-mAcc:87.28000	E-mAcc:74.82800
-[37]	N-rmse:0.27441	N-auc:0.94929	N-error:0.10644	E-rmse:0.36732	E-auc:0.83041	E-error:0.19318	N-mAcc:87.31900	E-mAcc:74.89000
-[38]	N-rmse:0.27410	N-auc:0.94949	N-error:0.10622	E-rmse:0.36741	E-auc:0.83075	E-error:0.19328	N-mAcc:87.33600	E-mAcc:74.91200
-[39]	N-rmse:0.27383	N-auc:0.94964	N-error:0.10609	E-rmse:0.36718	E-auc:0.83035	E-error:0.19311	N-mAcc:87.35300	E-mAcc:74.88800
-[40]	N-rmse:0.27358	N-auc:0.94975	N-error:0.10583	E-rmse:0.36770	E-auc:0.83042	E-error:0.19359	N-mAcc:87.36700	E-mAcc:74.88000
-[41]	N-rmse:0.27297	N-auc:0.95011	N-error:0.10533	E-rmse:0.36744	E-auc:0.83009	E-error:0.19362	N-mAcc:87.41500	E-mAcc:74.89100
-[42]	N-rmse:0.27264	N-auc:0.95037	N-error:0.10510	E-rmse:0.36825	E-auc:0.82934	E-error:0.19390	N-mAcc:87.44700	E-mAcc:74.89400
-[43]	N-rmse:0.27241	N-auc:0.95052	N-error:0.10489	E-rmse:0.36881	E-auc:0.82926	E-error:0.19404	N-mAcc:87.45500	E-mAcc:74.89300
-[44]	N-rmse:0.27208	N-auc:0.95070	N-error:0.10463	E-rmse:0.36888	E-auc:0.82865	E-error:0.19412	N-mAcc:87.48000	E-mAcc:74.88500
-[45]	N-rmse:0.27179	N-auc:0.95089	N-error:0.10439	E-rmse:0.36923	E-auc:0.82853	E-error:0.19394	N-mAcc:87.50200	E-mAcc:74.91100
-[46]	N-rmse:0.27159	N-auc:0.95101	N-error:0.10423	E-rmse:0.36960	E-auc:0.82817	E-error:0.19434	N-mAcc:87.52000	E-mAcc:74.89300
-[47]	N-rmse:0.27104	N-auc:0.95139	N-error:0.10378	E-rmse:0.37021	E-auc:0.82781	E-error:0.19451	N-mAcc:87.55100	E-mAcc:74.89600
-[48]	N-rmse:0.27081	N-auc:0.95153	N-error:0.10363	E-rmse:0.37029	E-auc:0.82782	E-error:0.19451	N-mAcc:87.56900	E-mAcc:74.90900
-[49]	N-rmse:0.27020	N-auc:0.95191	N-error:0.10308	E-rmse:0.37032	E-auc:0.82709	E-error:0.19455	N-mAcc:87.62700	E-mAcc:74.96200
-[2020-05-20 03:47:35] (02:01:15) train done.
-[2020-05-20 03:47:36] predict train:
-[2020-05-20 03:47:37]   accuracy   +: 84.276%
-[2020-05-20 03:47:37]   accuracy   -: 90.978%
-[2020-05-20 03:47:37]   accuracy avg: 87.627%
-[2020-05-20 03:47:37]   accuracy ALL: 89.692%
-[2020-05-20 03:47:37] predict test:
-[2020-05-20 03:47:37]   accuracy   +: 68.012%
-[2020-05-20 03:47:37]   accuracy   -: 81.912%
-[2020-05-20 03:47:37]   accuracy avg: 74.962%
-[2020-05-20 03:47:37]   accuracy ALL: 80.545%
-[2020-05-20 03:47:38] param:
-	{'booster': 'gbtree', 'max_depth': 10, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 2}
-	num_round: 50
-[0]	N-rmse:0.46778	N-auc:0.93245	N-error:0.11746	E-rmse:0.47615	E-auc:0.79371	E-error:0.19723	N-mAcc:84.68700	E-mAcc:72.41900
-[1]	N-rmse:0.43990	N-auc:0.93684	N-error:0.11709	E-rmse:0.45574	E-auc:0.80536	E-error:0.19632	N-mAcc:85.66100	E-mAcc:73.52300
-[2]	N-rmse:0.41614	N-auc:0.93897	N-error:0.11537	E-rmse:0.43833	E-auc:0.80916	E-error:0.19202	N-mAcc:86.03200	E-mAcc:73.80500
-[3]	N-rmse:0.39477	N-auc:0.94034	N-error:0.11388	E-rmse:0.42539	E-auc:0.80733	E-error:0.19061	N-mAcc:86.30700	E-mAcc:73.82500
-[4]	N-rmse:0.37747	N-auc:0.94109	N-error:0.11227	E-rmse:0.41491	E-auc:0.80479	E-error:0.19326	N-mAcc:86.40800	E-mAcc:73.73800
-[5]	N-rmse:0.36242	N-auc:0.94180	N-error:0.11216	E-rmse:0.40523	E-auc:0.80935	E-error:0.19303	N-mAcc:86.43500	E-mAcc:73.75400
-[6]	N-rmse:0.34935	N-auc:0.94215	N-error:0.11163	E-rmse:0.39770	E-auc:0.81566	E-error:0.19316	N-mAcc:86.50000	E-mAcc:73.84600
-[7]	N-rmse:0.33722	N-auc:0.94300	N-error:0.11092	E-rmse:0.39213	E-auc:0.81395	E-error:0.19032	N-mAcc:86.60700	E-mAcc:73.91900
-[8]	N-rmse:0.32878	N-auc:0.94375	N-error:0.10989	E-rmse:0.38882	E-auc:0.81242	E-error:0.19424	N-mAcc:86.70500	E-mAcc:73.90600
-[9]	N-rmse:0.31961	N-auc:0.94409	N-error:0.10964	E-rmse:0.38439	E-auc:0.81435	E-error:0.19277	N-mAcc:86.74500	E-mAcc:74.03400
-[10]	N-rmse:0.31328	N-auc:0.94454	N-error:0.10942	E-rmse:0.38183	E-auc:0.81327	E-error:0.19492	N-mAcc:86.79000	E-mAcc:74.02300
-[11]	N-rmse:0.30760	N-auc:0.94498	N-error:0.10898	E-rmse:0.37994	E-auc:0.81471	E-error:0.19569	N-mAcc:86.83200	E-mAcc:74.16000
-[12]	N-rmse:0.30201	N-auc:0.94530	N-error:0.10840	E-rmse:0.37865	E-auc:0.81475	E-error:0.19625	N-mAcc:86.89400	E-mAcc:74.20500
-[13]	N-rmse:0.29785	N-auc:0.94595	N-error:0.10794	E-rmse:0.37688	E-auc:0.81752	E-error:0.19599	N-mAcc:86.94000	E-mAcc:74.24700
-[14]	N-rmse:0.29492	N-auc:0.94640	N-error:0.10786	E-rmse:0.37573	E-auc:0.82002	E-error:0.19529	N-mAcc:86.99400	E-mAcc:74.41200
-[15]	N-rmse:0.29124	N-auc:0.94683	N-error:0.10718	E-rmse:0.37473	E-auc:0.82071	E-error:0.19440	N-mAcc:87.03600	E-mAcc:74.57700
-[16]	N-rmse:0.28878	N-auc:0.94700	N-error:0.10690	E-rmse:0.37388	E-auc:0.82142	E-error:0.19416	N-mAcc:87.05400	E-mAcc:74.61200
-[17]	N-rmse:0.28632	N-auc:0.94724	N-error:0.10671	E-rmse:0.37322	E-auc:0.82326	E-error:0.19449	N-mAcc:87.08600	E-mAcc:74.67000
-[18]	N-rmse:0.28418	N-auc:0.94768	N-error:0.10624	E-rmse:0.37211	E-auc:0.82380	E-error:0.19377	N-mAcc:87.11300	E-mAcc:74.71900
-[19]	N-rmse:0.28248	N-auc:0.94801	N-error:0.10593	E-rmse:0.37194	E-auc:0.82492	E-error:0.19374	N-mAcc:87.15700	E-mAcc:74.79100
-[20]	N-rmse:0.28063	N-auc:0.94831	N-error:0.10572	E-rmse:0.37177	E-auc:0.82605	E-error:0.19405	N-mAcc:87.19700	E-mAcc:74.84500
-[21]	N-rmse:0.27922	N-auc:0.94867	N-error:0.10522	E-rmse:0.37140	E-auc:0.82643	E-error:0.19421	N-mAcc:87.27200	E-mAcc:74.86700
-[22]	N-rmse:0.27770	N-auc:0.94911	N-error:0.10464	E-rmse:0.37169	E-auc:0.82604	E-error:0.19393	N-mAcc:87.33300	E-mAcc:74.85600
-[23]	N-rmse:0.27650	N-auc:0.94945	N-error:0.10432	E-rmse:0.37164	E-auc:0.82700	E-error:0.19432	N-mAcc:87.39200	E-mAcc:74.89400
-[24]	N-rmse:0.27548	N-auc:0.94998	N-error:0.10393	E-rmse:0.37035	E-auc:0.82768	E-error:0.19462	N-mAcc:87.43400	E-mAcc:74.79900
-[25]	N-rmse:0.27453	N-auc:0.95024	N-error:0.10367	E-rmse:0.37045	E-auc:0.82778	E-error:0.19461	N-mAcc:87.46400	E-mAcc:74.82000
-[26]	N-rmse:0.27358	N-auc:0.95076	N-error:0.10322	E-rmse:0.37060	E-auc:0.82856	E-error:0.19468	N-mAcc:87.53100	E-mAcc:74.86600
-[27]	N-rmse:0.27277	N-auc:0.95110	N-error:0.10296	E-rmse:0.37022	E-auc:0.82884	E-error:0.19455	N-mAcc:87.56600	E-mAcc:74.87100
-[28]	N-rmse:0.27226	N-auc:0.95128	N-error:0.10278	E-rmse:0.37001	E-auc:0.82900	E-error:0.19453	N-mAcc:87.58200	E-mAcc:74.85900
-[29]	N-rmse:0.27136	N-auc:0.95173	N-error:0.10223	E-rmse:0.37070	E-auc:0.82793	E-error:0.19448	N-mAcc:87.63800	E-mAcc:74.79600
-[30]	N-rmse:0.27057	N-auc:0.95217	N-error:0.10175	E-rmse:0.36942	E-auc:0.82827	E-error:0.19428	N-mAcc:87.71100	E-mAcc:74.74100
-[31]	N-rmse:0.26989	N-auc:0.95259	N-error:0.10136	E-rmse:0.36929	E-auc:0.82826	E-error:0.19440	N-mAcc:87.77400	E-mAcc:74.77200
-[32]	N-rmse:0.26958	N-auc:0.95272	N-error:0.10121	E-rmse:0.36915	E-auc:0.82858	E-error:0.19416	N-mAcc:87.78700	E-mAcc:74.78600
-[33]	N-rmse:0.26908	N-auc:0.95300	N-error:0.10096	E-rmse:0.37025	E-auc:0.82579	E-error:0.19470	N-mAcc:87.81500	E-mAcc:74.64900
-[34]	N-rmse:0.26864	N-auc:0.95327	N-error:0.10076	E-rmse:0.37074	E-auc:0.82541	E-error:0.19513	N-mAcc:87.84200	E-mAcc:74.64800
-[35]	N-rmse:0.26810	N-auc:0.95354	N-error:0.10052	E-rmse:0.37084	E-auc:0.82595	E-error:0.19492	N-mAcc:87.87600	E-mAcc:74.69100
-[36]	N-rmse:0.26754	N-auc:0.95391	N-error:0.10018	E-rmse:0.37136	E-auc:0.82586	E-error:0.19508	N-mAcc:87.93900	E-mAcc:74.70400
-[37]	N-rmse:0.26727	N-auc:0.95413	N-error:0.10002	E-rmse:0.37247	E-auc:0.82504	E-error:0.19584	N-mAcc:87.97000	E-mAcc:74.68400
-[38]	N-rmse:0.26700	N-auc:0.95428	N-error:0.09983	E-rmse:0.37238	E-auc:0.82551	E-error:0.19573	N-mAcc:87.99300	E-mAcc:74.69700
-[39]	N-rmse:0.26665	N-auc:0.95449	N-error:0.09963	E-rmse:0.37255	E-auc:0.82547	E-error:0.19602	N-mAcc:88.02000	E-mAcc:74.68800
-[40]	N-rmse:0.26629	N-auc:0.95466	N-error:0.09934	E-rmse:0.37282	E-auc:0.82509	E-error:0.19669	N-mAcc:88.03700	E-mAcc:74.63600
-[41]	N-rmse:0.26594	N-auc:0.95488	N-error:0.09910	E-rmse:0.37351	E-auc:0.82466	E-error:0.19722	N-mAcc:88.05400	E-mAcc:74.62500
-[42]	N-rmse:0.26569	N-auc:0.95500	N-error:0.09895	E-rmse:0.37350	E-auc:0.82459	E-error:0.19714	N-mAcc:88.07200	E-mAcc:74.64300
-[43]	N-rmse:0.26553	N-auc:0.95509	N-error:0.09889	E-rmse:0.37392	E-auc:0.82415	E-error:0.19731	N-mAcc:88.07600	E-mAcc:74.63600
-[44]	N-rmse:0.26536	N-auc:0.95519	N-error:0.09877	E-rmse:0.37388	E-auc:0.82410	E-error:0.19696	N-mAcc:88.09000	E-mAcc:74.65500
-[45]	N-rmse:0.26488	N-auc:0.95547	N-error:0.09841	E-rmse:0.37465	E-auc:0.82353	E-error:0.19732	N-mAcc:88.12200	E-mAcc:74.64600
-[46]	N-rmse:0.26473	N-auc:0.95558	N-error:0.09831	E-rmse:0.37513	E-auc:0.82320	E-error:0.19779	N-mAcc:88.13800	E-mAcc:74.63000
-[47]	N-rmse:0.26443	N-auc:0.95576	N-error:0.09810	E-rmse:0.37604	E-auc:0.82249	E-error:0.19812	N-mAcc:88.15400	E-mAcc:74.66200
-[48]	N-rmse:0.26417	N-auc:0.95588	N-error:0.09790	E-rmse:0.37628	E-auc:0.82259	E-error:0.19789	N-mAcc:88.16400	E-mAcc:74.68900
-[49]	N-rmse:0.26394	N-auc:0.95602	N-error:0.09773	E-rmse:0.37651	E-auc:0.82247	E-error:0.19806	N-mAcc:88.18400	E-mAcc:74.69200
-[2020-05-20 06:08:38] (02:21:00) train done.
-[2020-05-20 06:08:39] predict train:
-[2020-05-20 06:08:40]   accuracy   +: 84.870%
-[2020-05-20 06:08:40]   accuracy   -: 91.499%
-[2020-05-20 06:08:40]   accuracy avg: 88.184%
-[2020-05-20 06:08:40]   accuracy ALL: 90.227%
-[2020-05-20 06:08:40] predict test:
-[2020-05-20 06:08:40]   accuracy   +: 67.842%
-[2020-05-20 06:08:40]   accuracy   -: 81.541%
-[2020-05-20 06:08:40]   accuracy avg: 74.692%
-[2020-05-20 06:08:40]   accuracy ALL: 80.194%
-[2020-05-20 06:08:41] param:
-	{'booster': 'gbtree', 'max_depth': 11, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 2}
-	num_round: 50
-[0]	N-rmse:0.46702	N-auc:0.93795	N-error:0.11372	E-rmse:0.47675	E-auc:0.78821	E-error:0.22332	N-mAcc:85.63300	E-mAcc:71.52300
-[1]	N-rmse:0.43846	N-auc:0.94236	N-error:0.10942	E-rmse:0.45709	E-auc:0.79839	E-error:0.20878	N-mAcc:86.39000	E-mAcc:72.72700
-[2]	N-rmse:0.41423	N-auc:0.94390	N-error:0.10860	E-rmse:0.44127	E-auc:0.80239	E-error:0.21164	N-mAcc:86.57900	E-mAcc:72.78400
-[3]	N-rmse:0.39220	N-auc:0.94554	N-error:0.10679	E-rmse:0.42860	E-auc:0.80143	E-error:0.20477	N-mAcc:86.88000	E-mAcc:73.46800
-[4]	N-rmse:0.37503	N-auc:0.94592	N-error:0.10696	E-rmse:0.41792	E-auc:0.80834	E-error:0.20505	N-mAcc:86.96600	E-mAcc:73.48800
-[5]	N-rmse:0.35936	N-auc:0.94667	N-error:0.10642	E-rmse:0.40891	E-auc:0.80792	E-error:0.20292	N-mAcc:87.01600	E-mAcc:73.58800
-[6]	N-rmse:0.34561	N-auc:0.94714	N-error:0.10569	E-rmse:0.40135	E-auc:0.80763	E-error:0.20261	N-mAcc:87.08500	E-mAcc:73.62100
-[7]	N-rmse:0.33305	N-auc:0.94776	N-error:0.10478	E-rmse:0.39518	E-auc:0.80843	E-error:0.20228	N-mAcc:87.20100	E-mAcc:73.71000
-[8]	N-rmse:0.32428	N-auc:0.94834	N-error:0.10434	E-rmse:0.39058	E-auc:0.80827	E-error:0.20303	N-mAcc:87.26500	E-mAcc:73.61100
-[9]	N-rmse:0.31478	N-auc:0.94861	N-error:0.10393	E-rmse:0.38581	E-auc:0.81010	E-error:0.20125	N-mAcc:87.32100	E-mAcc:73.71700
-[10]	N-rmse:0.30830	N-auc:0.94899	N-error:0.10340	E-rmse:0.38259	E-auc:0.81299	E-error:0.20302	N-mAcc:87.38600	E-mAcc:73.77000
-[11]	N-rmse:0.30228	N-auc:0.94933	N-error:0.10311	E-rmse:0.38012	E-auc:0.81355	E-error:0.20229	N-mAcc:87.40900	E-mAcc:73.85800
-[12]	N-rmse:0.29654	N-auc:0.94983	N-error:0.10259	E-rmse:0.37805	E-auc:0.81542	E-error:0.20219	N-mAcc:87.48000	E-mAcc:73.87800
-[13]	N-rmse:0.29237	N-auc:0.95034	N-error:0.10213	E-rmse:0.37678	E-auc:0.81630	E-error:0.20236	N-mAcc:87.52500	E-mAcc:73.94400
-[14]	N-rmse:0.28905	N-auc:0.95086	N-error:0.10154	E-rmse:0.37591	E-auc:0.81657	E-error:0.20260	N-mAcc:87.58000	E-mAcc:73.98300
-[15]	N-rmse:0.28515	N-auc:0.95124	N-error:0.10117	E-rmse:0.37549	E-auc:0.81741	E-error:0.20356	N-mAcc:87.61900	E-mAcc:73.98000
-[16]	N-rmse:0.28253	N-auc:0.95154	N-error:0.10092	E-rmse:0.37518	E-auc:0.81861	E-error:0.20382	N-mAcc:87.65600	E-mAcc:74.00700
-[17]	N-rmse:0.28000	N-auc:0.95173	N-error:0.10070	E-rmse:0.37480	E-auc:0.81857	E-error:0.20339	N-mAcc:87.68000	E-mAcc:74.03700
-[18]	N-rmse:0.27816	N-auc:0.95197	N-error:0.10046	E-rmse:0.37433	E-auc:0.81966	E-error:0.20255	N-mAcc:87.70600	E-mAcc:74.13400
-[19]	N-rmse:0.27663	N-auc:0.95220	N-error:0.10027	E-rmse:0.37313	E-auc:0.82057	E-error:0.20180	N-mAcc:87.73600	E-mAcc:74.20300
-[20]	N-rmse:0.27434	N-auc:0.95270	N-error:0.09972	E-rmse:0.37289	E-auc:0.82073	E-error:0.20133	N-mAcc:87.80200	E-mAcc:74.23400
-[21]	N-rmse:0.27291	N-auc:0.95292	N-error:0.09937	E-rmse:0.37279	E-auc:0.82114	E-error:0.20192	N-mAcc:87.83400	E-mAcc:74.24100
-[22]	N-rmse:0.27163	N-auc:0.95322	N-error:0.09900	E-rmse:0.37286	E-auc:0.82190	E-error:0.20194	N-mAcc:87.88100	E-mAcc:74.27500
-[23]	N-rmse:0.27041	N-auc:0.95356	N-error:0.09870	E-rmse:0.37326	E-auc:0.82066	E-error:0.20205	N-mAcc:87.91900	E-mAcc:74.18100
-[24]	N-rmse:0.26950	N-auc:0.95379	N-error:0.09843	E-rmse:0.37350	E-auc:0.82111	E-error:0.20253	N-mAcc:87.95400	E-mAcc:74.17100
-[25]	N-rmse:0.26852	N-auc:0.95412	N-error:0.09822	E-rmse:0.37401	E-auc:0.82142	E-error:0.20283	N-mAcc:87.98800	E-mAcc:74.20500
-[26]	N-rmse:0.26783	N-auc:0.95437	N-error:0.09799	E-rmse:0.37424	E-auc:0.82146	E-error:0.20314	N-mAcc:88.01600	E-mAcc:74.18900
-[27]	N-rmse:0.26699	N-auc:0.95476	N-error:0.09772	E-rmse:0.37419	E-auc:0.82180	E-error:0.20269	N-mAcc:88.06400	E-mAcc:74.24600
-[28]	N-rmse:0.26633	N-auc:0.95505	N-error:0.09743	E-rmse:0.37506	E-auc:0.82087	E-error:0.20337	N-mAcc:88.09600	E-mAcc:74.22300
-[29]	N-rmse:0.26573	N-auc:0.95536	N-error:0.09722	E-rmse:0.37500	E-auc:0.82094	E-error:0.20331	N-mAcc:88.13200	E-mAcc:74.23700
-[30]	N-rmse:0.26494	N-auc:0.95572	N-error:0.09680	E-rmse:0.37481	E-auc:0.82014	E-error:0.20330	N-mAcc:88.18200	E-mAcc:74.21000
-[31]	N-rmse:0.26444	N-auc:0.95595	N-error:0.09654	E-rmse:0.37586	E-auc:0.81911	E-error:0.20393	N-mAcc:88.20600	E-mAcc:74.16600
-[32]	N-rmse:0.26389	N-auc:0.95628	N-error:0.09629	E-rmse:0.37632	E-auc:0.81922	E-error:0.20438	N-mAcc:88.25100	E-mAcc:74.22400
-[33]	N-rmse:0.26323	N-auc:0.95672	N-error:0.09600	E-rmse:0.37664	E-auc:0.81901	E-error:0.20453	N-mAcc:88.29700	E-mAcc:74.28200
-[34]	N-rmse:0.26274	N-auc:0.95701	N-error:0.09574	E-rmse:0.37664	E-auc:0.81916	E-error:0.20411	N-mAcc:88.34300	E-mAcc:74.34200
-[35]	N-rmse:0.26225	N-auc:0.95732	N-error:0.09546	E-rmse:0.37677	E-auc:0.81939	E-error:0.20431	N-mAcc:88.38600	E-mAcc:74.36500
-[36]	N-rmse:0.26158	N-auc:0.95770	N-error:0.09515	E-rmse:0.37716	E-auc:0.81895	E-error:0.20411	N-mAcc:88.43600	E-mAcc:74.40600
-[37]	N-rmse:0.26123	N-auc:0.95794	N-error:0.09495	E-rmse:0.37705	E-auc:0.81948	E-error:0.20363	N-mAcc:88.46400	E-mAcc:74.45600
-[38]	N-rmse:0.26098	N-auc:0.95810	N-error:0.09481	E-rmse:0.37789	E-auc:0.81895	E-error:0.20472	N-mAcc:88.48200	E-mAcc:74.40600
-[39]	N-rmse:0.26066	N-auc:0.95828	N-error:0.09459	E-rmse:0.37831	E-auc:0.81885	E-error:0.20509	N-mAcc:88.50400	E-mAcc:74.40400
-[40]	N-rmse:0.26031	N-auc:0.95847	N-error:0.09438	E-rmse:0.37861	E-auc:0.81869	E-error:0.20505	N-mAcc:88.52500	E-mAcc:74.42900
-[41]	N-rmse:0.26007	N-auc:0.95860	N-error:0.09424	E-rmse:0.37897	E-auc:0.81849	E-error:0.20557	N-mAcc:88.54200	E-mAcc:74.42100
-[42]	N-rmse:0.25975	N-auc:0.95879	N-error:0.09405	E-rmse:0.37971	E-auc:0.81786	E-error:0.20637	N-mAcc:88.56500	E-mAcc:74.37700
-[43]	N-rmse:0.25948	N-auc:0.95892	N-error:0.09390	E-rmse:0.37973	E-auc:0.81762	E-error:0.20630	N-mAcc:88.58000	E-mAcc:74.37700
-[44]	N-rmse:0.25927	N-auc:0.95904	N-error:0.09377	E-rmse:0.38061	E-auc:0.81625	E-error:0.20671	N-mAcc:88.59300	E-mAcc:74.38100
-[45]	N-rmse:0.25910	N-auc:0.95916	N-error:0.09368	E-rmse:0.38065	E-auc:0.81650	E-error:0.20666	N-mAcc:88.61500	E-mAcc:74.39200
-[46]	N-rmse:0.25880	N-auc:0.95933	N-error:0.09345	E-rmse:0.38122	E-auc:0.81605	E-error:0.20705	N-mAcc:88.63300	E-mAcc:74.38600
-[47]	N-rmse:0.25864	N-auc:0.95941	N-error:0.09335	E-rmse:0.38156	E-auc:0.81573	E-error:0.20718	N-mAcc:88.64300	E-mAcc:74.42000
-[48]	N-rmse:0.25840	N-auc:0.95953	N-error:0.09319	E-rmse:0.38164	E-auc:0.81577	E-error:0.20707	N-mAcc:88.66200	E-mAcc:74.42200
-[49]	N-rmse:0.25809	N-auc:0.95969	N-error:0.09295	E-rmse:0.38179	E-auc:0.81506	E-error:0.20695	N-mAcc:88.67900	E-mAcc:74.43100
-[2020-05-20 08:55:07] (02:46:26) train done.
-[2020-05-20 08:55:09] predict train:
-[2020-05-20 08:55:10]   accuracy   +: 85.392%
-[2020-05-20 08:55:10]   accuracy   -: 91.966%
-[2020-05-20 08:55:10]   accuracy avg: 88.679%
-[2020-05-20 08:55:10]   accuracy ALL: 90.705%
-[2020-05-20 08:55:10] predict test:
-[2020-05-20 08:55:11]   accuracy   +: 68.364%
-[2020-05-20 08:55:11]   accuracy   -: 80.499%
-[2020-05-20 08:55:11]   accuracy avg: 74.431%
-[2020-05-20 08:55:11]   accuracy ALL: 79.305%
+[2020-05-20 21:29:17] begin...
+[2020-05-20 21:29:17] #cols: 135
+[2020-05-20 21:29:17] load ./data/train.csv ...
+[21:32:29] 28358032x135 matrix with 3828334320 entries loaded from ./data/train.csv?format=csv&label_column=0
+[2020-05-20 21:32:36] # train set: 28358032
+[2020-05-20 21:32:36] # train   +: (19.51%)   5533671
+[2020-05-20 21:32:36] # train   -: (80.49%)   22824361
+[2020-05-20 21:32:36] # train -/+: 4.12
+[2020-05-20 21:32:36] load ./data/test.csv ...
+[21:33:06] 3909776x135 matrix with 527819760 entries loaded from ./data/test.csv?format=csv&label_column=0
+[2020-05-20 21:33:07] # tests set: 3909776
+[2020-05-20 21:33:07] # tests   +: (19.47%)   761223
+[2020-05-20 21:33:07] # tests   -: (80.53%)   3148553
+[2020-05-20 21:33:07] # tests -/+: 4.14
+[2020-05-20 21:33:07] param:
+	{'booster': 'gbtree', 'max_depth': 4, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 3}
+	num_round: 60
+[0]	N-rmse:0.47580	N-auc:0.88552	N-error:0.19517	E-rmse:0.48188	E-auc:0.84377	E-error:0.28352	N-mAcc:83.30200	E-mAcc:76.61200
+[1]	N-rmse:0.45124	N-auc:0.89266	N-error:0.18460	E-rmse:0.46695	E-auc:0.84867	E-error:0.26445	N-mAcc:83.49500	E-mAcc:77.62600
+[2]	N-rmse:0.43629	N-auc:0.89375	N-error:0.18188	E-rmse:0.45446	E-auc:0.85242	E-error:0.26216	N-mAcc:83.56900	E-mAcc:77.76300
+[3]	N-rmse:0.42134	N-auc:0.89417	N-error:0.18037	E-rmse:0.44409	E-auc:0.85498	E-error:0.25866	N-mAcc:83.54200	E-mAcc:77.95500
+[4]	N-rmse:0.40562	N-auc:0.89575	N-error:0.17902	E-rmse:0.43554	E-auc:0.85466	E-error:0.25658	N-mAcc:83.51900	E-mAcc:77.98800
+[5]	N-rmse:0.39479	N-auc:0.89605	N-error:0.17984	E-rmse:0.42922	E-auc:0.85369	E-error:0.26003	N-mAcc:83.68200	E-mAcc:77.87700
+[6]	N-rmse:0.38525	N-auc:0.89763	N-error:0.17829	E-rmse:0.42319	E-auc:0.85441	E-error:0.25807	N-mAcc:83.68500	E-mAcc:77.98900
+[7]	N-rmse:0.37920	N-auc:0.89980	N-error:0.17814	E-rmse:0.41814	E-auc:0.85642	E-error:0.25863	N-mAcc:83.70500	E-mAcc:77.97700
+[8]	N-rmse:0.37185	N-auc:0.90023	N-error:0.17856	E-rmse:0.41403	E-auc:0.85565	E-error:0.25890	N-mAcc:83.77000	E-mAcc:77.98600
+[9]	N-rmse:0.36730	N-auc:0.90146	N-error:0.17842	E-rmse:0.41055	E-auc:0.85679	E-error:0.25902	N-mAcc:83.76300	E-mAcc:78.02900
+[10]	N-rmse:0.36142	N-auc:0.90255	N-error:0.17788	E-rmse:0.41005	E-auc:0.85446	E-error:0.26545	N-mAcc:83.86700	E-mAcc:77.61600
+[11]	N-rmse:0.35870	N-auc:0.90314	N-error:0.17704	E-rmse:0.40762	E-auc:0.85555	E-error:0.26319	N-mAcc:83.87900	E-mAcc:77.70100
+[12]	N-rmse:0.35518	N-auc:0.90398	N-error:0.17630	E-rmse:0.40460	E-auc:0.85676	E-error:0.25944	N-mAcc:83.89900	E-mAcc:77.84900
+[13]	N-rmse:0.35274	N-auc:0.90452	N-error:0.17647	E-rmse:0.40315	E-auc:0.85738	E-error:0.25977	N-mAcc:83.92300	E-mAcc:77.86100
+[14]	N-rmse:0.34978	N-auc:0.90506	N-error:0.17640	E-rmse:0.40183	E-auc:0.85733	E-error:0.26311	N-mAcc:83.99500	E-mAcc:77.61900
+[15]	N-rmse:0.34815	N-auc:0.90595	N-error:0.17582	E-rmse:0.40067	E-auc:0.85844	E-error:0.26149	N-mAcc:83.98300	E-mAcc:77.69000
+[16]	N-rmse:0.34677	N-auc:0.90652	N-error:0.17563	E-rmse:0.39953	E-auc:0.85792	E-error:0.26173	N-mAcc:84.04000	E-mAcc:77.61300
+[17]	N-rmse:0.34528	N-auc:0.90713	N-error:0.17506	E-rmse:0.39757	E-auc:0.85836	E-error:0.25978	N-mAcc:84.04800	E-mAcc:77.69600
+[18]	N-rmse:0.34451	N-auc:0.90747	N-error:0.17492	E-rmse:0.39700	E-auc:0.85924	E-error:0.25942	N-mAcc:84.07700	E-mAcc:77.72900
+[19]	N-rmse:0.34289	N-auc:0.90802	N-error:0.17434	E-rmse:0.39617	E-auc:0.85860	E-error:0.25881	N-mAcc:84.10200	E-mAcc:77.63100
+[20]	N-rmse:0.34187	N-auc:0.90849	N-error:0.17434	E-rmse:0.39537	E-auc:0.85737	E-error:0.25830	N-mAcc:84.12700	E-mAcc:77.61500
+[21]	N-rmse:0.34108	N-auc:0.90885	N-error:0.17400	E-rmse:0.39437	E-auc:0.85773	E-error:0.25689	N-mAcc:84.14200	E-mAcc:77.63600
+[22]	N-rmse:0.34054	N-auc:0.90923	N-error:0.17357	E-rmse:0.39352	E-auc:0.85808	E-error:0.25556	N-mAcc:84.15300	E-mAcc:77.68000
+[23]	N-rmse:0.33959	N-auc:0.90964	N-error:0.17319	E-rmse:0.39293	E-auc:0.85761	E-error:0.25424	N-mAcc:84.15600	E-mAcc:77.75400
+[24]	N-rmse:0.33910	N-auc:0.91014	N-error:0.17277	E-rmse:0.39284	E-auc:0.86008	E-error:0.25451	N-mAcc:84.16300	E-mAcc:77.84800
+[25]	N-rmse:0.33861	N-auc:0.91044	N-error:0.17271	E-rmse:0.39249	E-auc:0.86014	E-error:0.25372	N-mAcc:84.16600	E-mAcc:77.81700
+[26]	N-rmse:0.33812	N-auc:0.91098	N-error:0.17252	E-rmse:0.39292	E-auc:0.85851	E-error:0.25385	N-mAcc:84.17800	E-mAcc:77.84900
+[27]	N-rmse:0.33740	N-auc:0.91140	N-error:0.17226	E-rmse:0.39304	E-auc:0.86054	E-error:0.25433	N-mAcc:84.19000	E-mAcc:77.92300
+[28]	N-rmse:0.33674	N-auc:0.91205	N-error:0.17209	E-rmse:0.39244	E-auc:0.86063	E-error:0.25470	N-mAcc:84.23900	E-mAcc:77.85900
+[29]	N-rmse:0.33643	N-auc:0.91244	N-error:0.17194	E-rmse:0.39236	E-auc:0.86045	E-error:0.25475	N-mAcc:84.26500	E-mAcc:77.88200
+[30]	N-rmse:0.33604	N-auc:0.91289	N-error:0.17164	E-rmse:0.39135	E-auc:0.86120	E-error:0.25304	N-mAcc:84.27900	E-mAcc:77.93900
+[31]	N-rmse:0.33571	N-auc:0.91328	N-error:0.17158	E-rmse:0.39158	E-auc:0.85949	E-error:0.25364	N-mAcc:84.30600	E-mAcc:77.86600
+[32]	N-rmse:0.33528	N-auc:0.91376	N-error:0.17139	E-rmse:0.39145	E-auc:0.85994	E-error:0.25376	N-mAcc:84.31800	E-mAcc:77.87000
+[33]	N-rmse:0.33484	N-auc:0.91420	N-error:0.17108	E-rmse:0.39127	E-auc:0.85902	E-error:0.25382	N-mAcc:84.34100	E-mAcc:77.81500
+[34]	N-rmse:0.33468	N-auc:0.91441	N-error:0.17100	E-rmse:0.39068	E-auc:0.85937	E-error:0.25294	N-mAcc:84.35500	E-mAcc:77.83700
+[35]	N-rmse:0.33411	N-auc:0.91505	N-error:0.17065	E-rmse:0.39103	E-auc:0.85710	E-error:0.25227	N-mAcc:84.36400	E-mAcc:77.84400
+[36]	N-rmse:0.33315	N-auc:0.91607	N-error:0.16998	E-rmse:0.39064	E-auc:0.85467	E-error:0.25133	N-mAcc:84.40300	E-mAcc:77.83000
+[37]	N-rmse:0.33251	N-auc:0.91682	N-error:0.16966	E-rmse:0.39050	E-auc:0.85488	E-error:0.25087	N-mAcc:84.42800	E-mAcc:77.86400
+[38]	N-rmse:0.33110	N-auc:0.91814	N-error:0.16825	E-rmse:0.38937	E-auc:0.85280	E-error:0.24810	N-mAcc:84.50100	E-mAcc:77.77100
+[39]	N-rmse:0.33064	N-auc:0.91862	N-error:0.16808	E-rmse:0.38977	E-auc:0.85270	E-error:0.24883	N-mAcc:84.52900	E-mAcc:77.75300
+[40]	N-rmse:0.33019	N-auc:0.91899	N-error:0.16766	E-rmse:0.38981	E-auc:0.85352	E-error:0.24860	N-mAcc:84.53500	E-mAcc:77.81900
+[41]	N-rmse:0.32979	N-auc:0.91943	N-error:0.16761	E-rmse:0.38972	E-auc:0.85372	E-error:0.24876	N-mAcc:84.54300	E-mAcc:77.81500
+[42]	N-rmse:0.32947	N-auc:0.91973	N-error:0.16755	E-rmse:0.38965	E-auc:0.85386	E-error:0.24895	N-mAcc:84.54700	E-mAcc:77.80800
+[43]	N-rmse:0.32848	N-auc:0.92049	N-error:0.16652	E-rmse:0.39015	E-auc:0.85064	E-error:0.24910	N-mAcc:84.59800	E-mAcc:77.35100
+[44]	N-rmse:0.32819	N-auc:0.92071	N-error:0.16619	E-rmse:0.38948	E-auc:0.85088	E-error:0.24804	N-mAcc:84.61500	E-mAcc:77.35400
+[45]	N-rmse:0.32772	N-auc:0.92115	N-error:0.16574	E-rmse:0.38943	E-auc:0.85124	E-error:0.24783	N-mAcc:84.63300	E-mAcc:77.36100
+[46]	N-rmse:0.32737	N-auc:0.92144	N-error:0.16556	E-rmse:0.38923	E-auc:0.85145	E-error:0.24764	N-mAcc:84.63900	E-mAcc:77.36600
+[47]	N-rmse:0.32699	N-auc:0.92179	N-error:0.16518	E-rmse:0.38870	E-auc:0.85163	E-error:0.24686	N-mAcc:84.65400	E-mAcc:77.35800
+[48]	N-rmse:0.32676	N-auc:0.92192	N-error:0.16490	E-rmse:0.38848	E-auc:0.85183	E-error:0.24641	N-mAcc:84.65700	E-mAcc:77.36900
+[49]	N-rmse:0.32648	N-auc:0.92203	N-error:0.16457	E-rmse:0.38845	E-auc:0.85167	E-error:0.24633	N-mAcc:84.66500	E-mAcc:77.32100
+[50]	N-rmse:0.32536	N-auc:0.92297	N-error:0.16315	E-rmse:0.38682	E-auc:0.84972	E-error:0.24228	N-mAcc:84.76600	E-mAcc:76.80800
+[51]	N-rmse:0.32516	N-auc:0.92328	N-error:0.16296	E-rmse:0.38648	E-auc:0.84981	E-error:0.24158	N-mAcc:84.78600	E-mAcc:76.82000
+[52]	N-rmse:0.32487	N-auc:0.92346	N-error:0.16278	E-rmse:0.38631	E-auc:0.85000	E-error:0.24141	N-mAcc:84.79000	E-mAcc:76.81900
+[53]	N-rmse:0.32411	N-auc:0.92391	N-error:0.16172	E-rmse:0.38645	E-auc:0.84779	E-error:0.24230	N-mAcc:84.83800	E-mAcc:76.20300
+[54]	N-rmse:0.32391	N-auc:0.92408	N-error:0.16162	E-rmse:0.38649	E-auc:0.84779	E-error:0.24244	N-mAcc:84.84600	E-mAcc:76.20400
+[55]	N-rmse:0.32310	N-auc:0.92463	N-error:0.16002	E-rmse:0.38679	E-auc:0.84404	E-error:0.24322	N-mAcc:84.93600	E-mAcc:75.12900
+[56]	N-rmse:0.32283	N-auc:0.92482	N-error:0.15967	E-rmse:0.38727	E-auc:0.84410	E-error:0.24303	N-mAcc:84.94300	E-mAcc:75.15900
+[57]	N-rmse:0.32263	N-auc:0.92503	N-error:0.15951	E-rmse:0.38713	E-auc:0.84430	E-error:0.24289	N-mAcc:84.96200	E-mAcc:75.18900
+[58]	N-rmse:0.32241	N-auc:0.92520	N-error:0.15935	E-rmse:0.38708	E-auc:0.84423	E-error:0.24281	N-mAcc:84.97100	E-mAcc:75.18800
+[59]	N-rmse:0.32176	N-auc:0.92559	N-error:0.15785	E-rmse:0.38744	E-auc:0.84071	E-error:0.24366	N-mAcc:85.04800	E-mAcc:74.20300
+[2020-05-20 22:45:23] (01:12:16) train done.
+[2020-05-20 22:45:23] predict train:
+[2020-05-20 22:45:24]   accuracy   +: 86.412%
+[2020-05-20 22:45:24]   accuracy   -: 83.683%
+[2020-05-20 22:45:24]   accuracy avg: 85.048%
+[2020-05-20 22:45:24]   accuracy ALL: 84.216%
+[2020-05-20 22:45:24] predict test:
+[2020-05-20 22:45:24]   accuracy   +: 71.858%
+[2020-05-20 22:45:24]   accuracy   -: 76.547%
+[2020-05-20 22:45:24]   accuracy avg: 74.203%
+[2020-05-20 22:45:24]   accuracy ALL: 75.634%
+[2020-05-20 22:45:24] param:
+	{'booster': 'gbtree', 'max_depth': 5, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 3}
+	num_round: 60
+[0]	N-rmse:0.47577	N-auc:0.89382	N-error:0.17612	E-rmse:0.48131	E-auc:0.84389	E-error:0.25750	N-mAcc:83.58300	E-mAcc:78.34300
+[1]	N-rmse:0.45066	N-auc:0.89943	N-error:0.18126	E-rmse:0.46567	E-auc:0.85484	E-error:0.27050	N-mAcc:83.92100	E-mAcc:77.77400
+[2]	N-rmse:0.43317	N-auc:0.90151	N-error:0.17641	E-rmse:0.45377	E-auc:0.85329	E-error:0.26959	N-mAcc:83.91900	E-mAcc:77.66600
+[3]	N-rmse:0.41767	N-auc:0.90201	N-error:0.18010	E-rmse:0.44324	E-auc:0.85521	E-error:0.27379	N-mAcc:84.03400	E-mAcc:77.55700
+[4]	N-rmse:0.40260	N-auc:0.90439	N-error:0.17666	E-rmse:0.43413	E-auc:0.85656	E-error:0.26416	N-mAcc:83.95900	E-mAcc:78.02400
+[5]	N-rmse:0.39200	N-auc:0.90568	N-error:0.17627	E-rmse:0.42789	E-auc:0.85608	E-error:0.27024	N-mAcc:84.01600	E-mAcc:77.64700
+[6]	N-rmse:0.38208	N-auc:0.90657	N-error:0.17643	E-rmse:0.42205	E-auc:0.85252	E-error:0.26937	N-mAcc:84.10500	E-mAcc:77.59400
+[7]	N-rmse:0.37570	N-auc:0.90745	N-error:0.17530	E-rmse:0.41659	E-auc:0.85551	E-error:0.26520	N-mAcc:84.13600	E-mAcc:77.68000
+[8]	N-rmse:0.36805	N-auc:0.90781	N-error:0.17467	E-rmse:0.41188	E-auc:0.85446	E-error:0.26198	N-mAcc:84.17700	E-mAcc:77.74700
+[9]	N-rmse:0.36221	N-auc:0.90914	N-error:0.17396	E-rmse:0.40954	E-auc:0.85342	E-error:0.26426	N-mAcc:84.20600	E-mAcc:77.51900
+[10]	N-rmse:0.35655	N-auc:0.91140	N-error:0.17286	E-rmse:0.40563	E-auc:0.85112	E-error:0.26063	N-mAcc:84.21900	E-mAcc:77.60000
+[11]	N-rmse:0.35325	N-auc:0.91203	N-error:0.17310	E-rmse:0.40413	E-auc:0.84942	E-error:0.26213	N-mAcc:84.21000	E-mAcc:77.41300
+[12]	N-rmse:0.34941	N-auc:0.91278	N-error:0.17289	E-rmse:0.40199	E-auc:0.85107	E-error:0.26131	N-mAcc:84.27300	E-mAcc:77.50000
+[13]	N-rmse:0.34667	N-auc:0.91326	N-error:0.17294	E-rmse:0.40093	E-auc:0.85116	E-error:0.26164	N-mAcc:84.26700	E-mAcc:77.55600
+[14]	N-rmse:0.34494	N-auc:0.91393	N-error:0.17273	E-rmse:0.39948	E-auc:0.85199	E-error:0.26108	N-mAcc:84.26200	E-mAcc:77.53400
+[15]	N-rmse:0.34271	N-auc:0.91419	N-error:0.17218	E-rmse:0.39877	E-auc:0.85091	E-error:0.26167	N-mAcc:84.32000	E-mAcc:77.43600
+[16]	N-rmse:0.34020	N-auc:0.91565	N-error:0.17162	E-rmse:0.39721	E-auc:0.84786	E-error:0.26065	N-mAcc:84.35500	E-mAcc:77.38600
+[17]	N-rmse:0.33874	N-auc:0.91628	N-error:0.17106	E-rmse:0.39600	E-auc:0.85029	E-error:0.25978	N-mAcc:84.37300	E-mAcc:77.43800
+[18]	N-rmse:0.33720	N-auc:0.91656	N-error:0.17074	E-rmse:0.39518	E-auc:0.85185	E-error:0.25871	N-mAcc:84.36600	E-mAcc:77.47600
+[19]	N-rmse:0.33592	N-auc:0.91713	N-error:0.17007	E-rmse:0.39552	E-auc:0.85077	E-error:0.25954	N-mAcc:84.42200	E-mAcc:77.42800
+[20]	N-rmse:0.33446	N-auc:0.91799	N-error:0.16911	E-rmse:0.39528	E-auc:0.84864	E-error:0.25843	N-mAcc:84.45500	E-mAcc:77.47000
+[21]	N-rmse:0.33322	N-auc:0.91838	N-error:0.16874	E-rmse:0.39514	E-auc:0.84840	E-error:0.25838	N-mAcc:84.47200	E-mAcc:77.41300
+[22]	N-rmse:0.33253	N-auc:0.91882	N-error:0.16836	E-rmse:0.39453	E-auc:0.84767	E-error:0.25698	N-mAcc:84.49000	E-mAcc:77.45300
+[23]	N-rmse:0.33195	N-auc:0.91925	N-error:0.16805	E-rmse:0.39479	E-auc:0.84806	E-error:0.25725	N-mAcc:84.51900	E-mAcc:77.47900
+[24]	N-rmse:0.33126	N-auc:0.91970	N-error:0.16766	E-rmse:0.39487	E-auc:0.84674	E-error:0.25629	N-mAcc:84.53800	E-mAcc:77.51600
+[25]	N-rmse:0.33058	N-auc:0.92020	N-error:0.16752	E-rmse:0.39471	E-auc:0.84653	E-error:0.25691	N-mAcc:84.55200	E-mAcc:77.41900
+[26]	N-rmse:0.32970	N-auc:0.92047	N-error:0.16734	E-rmse:0.39427	E-auc:0.84711	E-error:0.25635	N-mAcc:84.56300	E-mAcc:77.44600
+[27]	N-rmse:0.32921	N-auc:0.92075	N-error:0.16701	E-rmse:0.39432	E-auc:0.84844	E-error:0.25617	N-mAcc:84.57400	E-mAcc:77.55500
+[28]	N-rmse:0.32878	N-auc:0.92115	N-error:0.16661	E-rmse:0.39397	E-auc:0.84808	E-error:0.25529	N-mAcc:84.59600	E-mAcc:77.42200
+[29]	N-rmse:0.32809	N-auc:0.92162	N-error:0.16625	E-rmse:0.39339	E-auc:0.84721	E-error:0.25386	N-mAcc:84.64400	E-mAcc:77.35600
+[30]	N-rmse:0.32739	N-auc:0.92215	N-error:0.16602	E-rmse:0.39367	E-auc:0.84518	E-error:0.25394	N-mAcc:84.66700	E-mAcc:77.19600
+[31]	N-rmse:0.32681	N-auc:0.92253	N-error:0.16540	E-rmse:0.39374	E-auc:0.84278	E-error:0.25445	N-mAcc:84.69900	E-mAcc:76.78600
+[32]	N-rmse:0.32644	N-auc:0.92291	N-error:0.16514	E-rmse:0.39389	E-auc:0.84223	E-error:0.25427	N-mAcc:84.73000	E-mAcc:76.75500
+[33]	N-rmse:0.32610	N-auc:0.92317	N-error:0.16492	E-rmse:0.39365	E-auc:0.84367	E-error:0.25371	N-mAcc:84.73800	E-mAcc:76.93800
+[34]	N-rmse:0.32583	N-auc:0.92340	N-error:0.16481	E-rmse:0.39315	E-auc:0.84408	E-error:0.25314	N-mAcc:84.75500	E-mAcc:76.95900
+[35]	N-rmse:0.32548	N-auc:0.92368	N-error:0.16449	E-rmse:0.39341	E-auc:0.84351	E-error:0.25282	N-mAcc:84.77900	E-mAcc:76.93200
+[36]	N-rmse:0.32473	N-auc:0.92415	N-error:0.16269	E-rmse:0.39212	E-auc:0.84193	E-error:0.25023	N-mAcc:84.87600	E-mAcc:76.17600
+[37]	N-rmse:0.32423	N-auc:0.92456	N-error:0.16229	E-rmse:0.39208	E-auc:0.84174	E-error:0.24967	N-mAcc:84.89900	E-mAcc:76.12900
+[38]	N-rmse:0.32390	N-auc:0.92491	N-error:0.16203	E-rmse:0.39201	E-auc:0.84230	E-error:0.24935	N-mAcc:84.91500	E-mAcc:76.21700
+[39]	N-rmse:0.32343	N-auc:0.92526	N-error:0.16127	E-rmse:0.39272	E-auc:0.84173	E-error:0.24981	N-mAcc:84.96700	E-mAcc:76.00800
+[40]	N-rmse:0.32288	N-auc:0.92574	N-error:0.16069	E-rmse:0.39329	E-auc:0.84069	E-error:0.25062	N-mAcc:85.00600	E-mAcc:75.72800
+[41]	N-rmse:0.32184	N-auc:0.92648	N-error:0.15782	E-rmse:0.39324	E-auc:0.83847	E-error:0.25093	N-mAcc:85.16400	E-mAcc:74.57900
+[42]	N-rmse:0.32139	N-auc:0.92683	N-error:0.15739	E-rmse:0.39330	E-auc:0.83829	E-error:0.25082	N-mAcc:85.19700	E-mAcc:74.57000
+[43]	N-rmse:0.32072	N-auc:0.92726	N-error:0.15559	E-rmse:0.39487	E-auc:0.83556	E-error:0.25295	N-mAcc:85.28000	E-mAcc:73.74900
+[44]	N-rmse:0.32014	N-auc:0.92766	N-error:0.15518	E-rmse:0.39464	E-auc:0.83574	E-error:0.25257	N-mAcc:85.31000	E-mAcc:73.76100
+[45]	N-rmse:0.31949	N-auc:0.92808	N-error:0.15418	E-rmse:0.39483	E-auc:0.83470	E-error:0.25310	N-mAcc:85.36500	E-mAcc:73.46900
+[46]	N-rmse:0.31932	N-auc:0.92828	N-error:0.15419	E-rmse:0.39467	E-auc:0.83474	E-error:0.25283	N-mAcc:85.38200	E-mAcc:73.51400
+[47]	N-rmse:0.31873	N-auc:0.92865	N-error:0.15345	E-rmse:0.39500	E-auc:0.83359	E-error:0.25327	N-mAcc:85.42000	E-mAcc:73.23400
+[48]	N-rmse:0.31832	N-auc:0.92899	N-error:0.15302	E-rmse:0.39449	E-auc:0.83405	E-error:0.25229	N-mAcc:85.45900	E-mAcc:73.28900
+[49]	N-rmse:0.31778	N-auc:0.92945	N-error:0.15231	E-rmse:0.39418	E-auc:0.83368	E-error:0.25088	N-mAcc:85.51700	E-mAcc:73.11300
+[50]	N-rmse:0.31751	N-auc:0.92957	N-error:0.15199	E-rmse:0.39439	E-auc:0.83308	E-error:0.25089	N-mAcc:85.53200	E-mAcc:73.01400
+[51]	N-rmse:0.31728	N-auc:0.92969	N-error:0.15179	E-rmse:0.39425	E-auc:0.83329	E-error:0.25065	N-mAcc:85.53600	E-mAcc:73.03800
+[52]	N-rmse:0.31707	N-auc:0.92988	N-error:0.15177	E-rmse:0.39453	E-auc:0.83318	E-error:0.25076	N-mAcc:85.55400	E-mAcc:73.03100
+[53]	N-rmse:0.31643	N-auc:0.93029	N-error:0.15064	E-rmse:0.39420	E-auc:0.83193	E-error:0.24705	N-mAcc:85.62500	E-mAcc:72.90600
+[54]	N-rmse:0.31624	N-auc:0.93047	N-error:0.15034	E-rmse:0.39401	E-auc:0.83222	E-error:0.24683	N-mAcc:85.63800	E-mAcc:72.90700
+[55]	N-rmse:0.31575	N-auc:0.93090	N-error:0.14999	E-rmse:0.39398	E-auc:0.83216	E-error:0.24665	N-mAcc:85.68100	E-mAcc:72.92600
+[56]	N-rmse:0.31533	N-auc:0.93114	N-error:0.14949	E-rmse:0.39434	E-auc:0.83207	E-error:0.24652	N-mAcc:85.70300	E-mAcc:72.93400
+[57]	N-rmse:0.31510	N-auc:0.93126	N-error:0.14922	E-rmse:0.39437	E-auc:0.83249	E-error:0.24623	N-mAcc:85.71000	E-mAcc:73.00500
+[58]	N-rmse:0.31488	N-auc:0.93144	N-error:0.14886	E-rmse:0.39445	E-auc:0.83162	E-error:0.24550	N-mAcc:85.73800	E-mAcc:72.89700
+[59]	N-rmse:0.31450	N-auc:0.93171	N-error:0.14839	E-rmse:0.39446	E-auc:0.83144	E-error:0.24544	N-mAcc:85.76800	E-mAcc:72.87300
+[2020-05-21 00:08:48] (01:23:24) train done.
+[2020-05-21 00:08:48] predict train:
+[2020-05-21 00:08:49]   accuracy   +: 86.765%
+[2020-05-21 00:08:49]   accuracy   -: 84.772%
+[2020-05-21 00:08:49]   accuracy avg: 85.768%
+[2020-05-21 00:08:49]   accuracy ALL: 85.161%
+[2020-05-21 00:08:49] predict test:
+[2020-05-21 00:08:49]   accuracy   +: 68.644%
+[2020-05-21 00:08:49]   accuracy   -: 77.102%
+[2020-05-21 00:08:49]   accuracy avg: 72.873%
+[2020-05-21 00:08:49]   accuracy ALL: 75.455%
+[2020-05-21 00:08:49] param:
+	{'booster': 'gbtree', 'max_depth': 6, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 3}
+	num_round: 60
+[0]	N-rmse:0.47474	N-auc:0.90175	N-error:0.17863	E-rmse:0.48130	E-auc:0.80741	E-error:0.28031	N-mAcc:84.03700	E-mAcc:76.77700
+[1]	N-rmse:0.44922	N-auc:0.91055	N-error:0.17433	E-rmse:0.46505	E-auc:0.82188	E-error:0.28732	N-mAcc:84.45000	E-mAcc:72.17100
+[2]	N-rmse:0.43084	N-auc:0.91158	N-error:0.16522	E-rmse:0.45319	E-auc:0.82719	E-error:0.26986	N-mAcc:84.38800	E-mAcc:73.16500
+[3]	N-rmse:0.41400	N-auc:0.91253	N-error:0.16839	E-rmse:0.44303	E-auc:0.82308	E-error:0.27794	N-mAcc:84.51900	E-mAcc:72.29900
+[4]	N-rmse:0.39983	N-auc:0.91414	N-error:0.16635	E-rmse:0.43416	E-auc:0.82513	E-error:0.27286	N-mAcc:84.67000	E-mAcc:72.39600
+[5]	N-rmse:0.38814	N-auc:0.91518	N-error:0.16624	E-rmse:0.42646	E-auc:0.82927	E-error:0.26457	N-mAcc:84.64800	E-mAcc:74.41100
+[6]	N-rmse:0.37773	N-auc:0.91628	N-error:0.16529	E-rmse:0.42127	E-auc:0.82708	E-error:0.26673	N-mAcc:84.70900	E-mAcc:74.11000
+[7]	N-rmse:0.36866	N-auc:0.91715	N-error:0.16795	E-rmse:0.41612	E-auc:0.83094	E-error:0.26577	N-mAcc:84.63100	E-mAcc:75.36400
+[8]	N-rmse:0.36281	N-auc:0.91749	N-error:0.16696	E-rmse:0.41271	E-auc:0.82988	E-error:0.26322	N-mAcc:84.68100	E-mAcc:75.86000
+[9]	N-rmse:0.35606	N-auc:0.91878	N-error:0.17029	E-rmse:0.40867	E-auc:0.83378	E-error:0.25980	N-mAcc:84.52600	E-mAcc:77.10600
+[10]	N-rmse:0.35139	N-auc:0.91917	N-error:0.16946	E-rmse:0.40578	E-auc:0.83523	E-error:0.26044	N-mAcc:84.55200	E-mAcc:77.04600
+[11]	N-rmse:0.34656	N-auc:0.91982	N-error:0.16928	E-rmse:0.40276	E-auc:0.83789	E-error:0.25925	N-mAcc:84.54200	E-mAcc:77.11900
+[12]	N-rmse:0.34316	N-auc:0.92032	N-error:0.16839	E-rmse:0.40050	E-auc:0.83768	E-error:0.25532	N-mAcc:84.57800	E-mAcc:77.22900
+[13]	N-rmse:0.34044	N-auc:0.92105	N-error:0.16843	E-rmse:0.39868	E-auc:0.83951	E-error:0.25507	N-mAcc:84.58800	E-mAcc:77.34200
+[14]	N-rmse:0.33830	N-auc:0.92138	N-error:0.16780	E-rmse:0.39726	E-auc:0.83979	E-error:0.25303	N-mAcc:84.60800	E-mAcc:77.43900
+[15]	N-rmse:0.33521	N-auc:0.92238	N-error:0.16655	E-rmse:0.39640	E-auc:0.83784	E-error:0.25146	N-mAcc:84.68000	E-mAcc:77.40600
+[16]	N-rmse:0.33347	N-auc:0.92283	N-error:0.16654	E-rmse:0.39509	E-auc:0.83975	E-error:0.25092	N-mAcc:84.68600	E-mAcc:77.56600
+[17]	N-rmse:0.33151	N-auc:0.92324	N-error:0.16612	E-rmse:0.39475	E-auc:0.84017	E-error:0.25028	N-mAcc:84.73700	E-mAcc:77.69500
+[18]	N-rmse:0.32962	N-auc:0.92431	N-error:0.16379	E-rmse:0.39493	E-auc:0.83656	E-error:0.25216	N-mAcc:84.86800	E-mAcc:76.55500
+[19]	N-rmse:0.32857	N-auc:0.92474	N-error:0.16435	E-rmse:0.39526	E-auc:0.83716	E-error:0.25144	N-mAcc:84.85200	E-mAcc:77.28900
+[20]	N-rmse:0.32712	N-auc:0.92526	N-error:0.16425	E-rmse:0.39435	E-auc:0.83797	E-error:0.25078	N-mAcc:84.88300	E-mAcc:77.37900
+[21]	N-rmse:0.32624	N-auc:0.92583	N-error:0.16405	E-rmse:0.39445	E-auc:0.83925	E-error:0.25093	N-mAcc:84.91300	E-mAcc:77.50700
+[22]	N-rmse:0.32512	N-auc:0.92631	N-error:0.16358	E-rmse:0.39375	E-auc:0.84047	E-error:0.24962	N-mAcc:84.94200	E-mAcc:77.55300
+[23]	N-rmse:0.32373	N-auc:0.92721	N-error:0.16029	E-rmse:0.39374	E-auc:0.83851	E-error:0.25161	N-mAcc:85.13300	E-mAcc:76.06800
+[24]	N-rmse:0.32237	N-auc:0.92795	N-error:0.15678	E-rmse:0.39359	E-auc:0.83896	E-error:0.25319	N-mAcc:85.33700	E-mAcc:74.95500
+[25]	N-rmse:0.32125	N-auc:0.92842	N-error:0.15524	E-rmse:0.39391	E-auc:0.83676	E-error:0.25410	N-mAcc:85.41700	E-mAcc:73.89500
+[26]	N-rmse:0.32079	N-auc:0.92870	N-error:0.15538	E-rmse:0.39401	E-auc:0.83697	E-error:0.25407	N-mAcc:85.42700	E-mAcc:74.13000
+[27]	N-rmse:0.31999	N-auc:0.92906	N-error:0.15461	E-rmse:0.39433	E-auc:0.83568	E-error:0.25536	N-mAcc:85.49700	E-mAcc:73.58400
+[28]	N-rmse:0.31936	N-auc:0.92956	N-error:0.15404	E-rmse:0.39476	E-auc:0.83613	E-error:0.25457	N-mAcc:85.54800	E-mAcc:73.71400
+[29]	N-rmse:0.31888	N-auc:0.92980	N-error:0.15361	E-rmse:0.39456	E-auc:0.83637	E-error:0.25451	N-mAcc:85.58200	E-mAcc:73.79400
+[30]	N-rmse:0.31839	N-auc:0.93021	N-error:0.15307	E-rmse:0.39494	E-auc:0.83617	E-error:0.25389	N-mAcc:85.63400	E-mAcc:73.92700
+[31]	N-rmse:0.31799	N-auc:0.93039	N-error:0.15273	E-rmse:0.39504	E-auc:0.83484	E-error:0.25497	N-mAcc:85.65700	E-mAcc:73.43100
+[32]	N-rmse:0.31740	N-auc:0.93080	N-error:0.15215	E-rmse:0.39658	E-auc:0.83202	E-error:0.25746	N-mAcc:85.69700	E-mAcc:72.89900
+[33]	N-rmse:0.31715	N-auc:0.93095	N-error:0.15201	E-rmse:0.39634	E-auc:0.83238	E-error:0.25701	N-mAcc:85.70800	E-mAcc:72.94600
+[34]	N-rmse:0.31671	N-auc:0.93132	N-error:0.15135	E-rmse:0.39616	E-auc:0.83289	E-error:0.25650	N-mAcc:85.75700	E-mAcc:73.02700
+[35]	N-rmse:0.31611	N-auc:0.93172	N-error:0.15024	E-rmse:0.39596	E-auc:0.83176	E-error:0.25454	N-mAcc:85.81200	E-mAcc:72.67700
+[36]	N-rmse:0.31566	N-auc:0.93210	N-error:0.14979	E-rmse:0.39682	E-auc:0.83028	E-error:0.25499	N-mAcc:85.85300	E-mAcc:72.45600
+[37]	N-rmse:0.31542	N-auc:0.93227	N-error:0.14955	E-rmse:0.39662	E-auc:0.83061	E-error:0.25472	N-mAcc:85.86600	E-mAcc:72.49600
+[38]	N-rmse:0.31514	N-auc:0.93250	N-error:0.14929	E-rmse:0.39654	E-auc:0.83074	E-error:0.25421	N-mAcc:85.89200	E-mAcc:72.52000
+[39]	N-rmse:0.31476	N-auc:0.93279	N-error:0.14891	E-rmse:0.39675	E-auc:0.83035	E-error:0.25393	N-mAcc:85.91800	E-mAcc:72.49900
+[40]	N-rmse:0.31368	N-auc:0.93348	N-error:0.14733	E-rmse:0.39688	E-auc:0.82898	E-error:0.25065	N-mAcc:86.00800	E-mAcc:72.39400
+[41]	N-rmse:0.31299	N-auc:0.93393	N-error:0.14641	E-rmse:0.39847	E-auc:0.82621	E-error:0.25115	N-mAcc:86.07300	E-mAcc:72.11900
+[42]	N-rmse:0.31244	N-auc:0.93427	N-error:0.14575	E-rmse:0.39855	E-auc:0.82552	E-error:0.25026	N-mAcc:86.10200	E-mAcc:72.10300
+[43]	N-rmse:0.31203	N-auc:0.93449	N-error:0.14521	E-rmse:0.39861	E-auc:0.82529	E-error:0.25009	N-mAcc:86.13000	E-mAcc:72.07400
+[44]	N-rmse:0.31167	N-auc:0.93479	N-error:0.14477	E-rmse:0.39908	E-auc:0.82460	E-error:0.25009	N-mAcc:86.15500	E-mAcc:72.02400
+[45]	N-rmse:0.31094	N-auc:0.93527	N-error:0.14349	E-rmse:0.39974	E-auc:0.82323	E-error:0.24794	N-mAcc:86.23100	E-mAcc:72.08400
+[46]	N-rmse:0.31051	N-auc:0.93556	N-error:0.14295	E-rmse:0.40019	E-auc:0.82214	E-error:0.24728	N-mAcc:86.27100	E-mAcc:72.14600
+[47]	N-rmse:0.31014	N-auc:0.93586	N-error:0.14256	E-rmse:0.40003	E-auc:0.82211	E-error:0.24699	N-mAcc:86.30500	E-mAcc:72.15700
+[48]	N-rmse:0.30981	N-auc:0.93602	N-error:0.14195	E-rmse:0.40015	E-auc:0.82201	E-error:0.24685	N-mAcc:86.34000	E-mAcc:72.16100
+[49]	N-rmse:0.30946	N-auc:0.93631	N-error:0.14144	E-rmse:0.39998	E-auc:0.82203	E-error:0.24660	N-mAcc:86.37500	E-mAcc:72.14900
+[50]	N-rmse:0.30917	N-auc:0.93647	N-error:0.14105	E-rmse:0.39984	E-auc:0.82219	E-error:0.24646	N-mAcc:86.39100	E-mAcc:72.15300
+[51]	N-rmse:0.30892	N-auc:0.93658	N-error:0.14075	E-rmse:0.39988	E-auc:0.82212	E-error:0.24643	N-mAcc:86.39700	E-mAcc:72.14900
+[52]	N-rmse:0.30866	N-auc:0.93670	N-error:0.14044	E-rmse:0.39983	E-auc:0.82120	E-error:0.24527	N-mAcc:86.41000	E-mAcc:72.10800
+[53]	N-rmse:0.30831	N-auc:0.93689	N-error:0.13999	E-rmse:0.40021	E-auc:0.82109	E-error:0.24524	N-mAcc:86.43100	E-mAcc:72.12400
+[54]	N-rmse:0.30793	N-auc:0.93731	N-error:0.13977	E-rmse:0.40028	E-auc:0.82129	E-error:0.24494	N-mAcc:86.47500	E-mAcc:72.18900
+[55]	N-rmse:0.30716	N-auc:0.93784	N-error:0.13886	E-rmse:0.40063	E-auc:0.82064	E-error:0.24489	N-mAcc:86.54500	E-mAcc:72.14800
+[56]	N-rmse:0.30692	N-auc:0.93807	N-error:0.13871	E-rmse:0.40050	E-auc:0.82108	E-error:0.24483	N-mAcc:86.57800	E-mAcc:72.18100
+[57]	N-rmse:0.30649	N-auc:0.93839	N-error:0.13832	E-rmse:0.40169	E-auc:0.81959	E-error:0.24488	N-mAcc:86.61200	E-mAcc:72.22300
+[58]	N-rmse:0.30637	N-auc:0.93848	N-error:0.13794	E-rmse:0.40149	E-auc:0.81993	E-error:0.24466	N-mAcc:86.62700	E-mAcc:72.23900
+[59]	N-rmse:0.30595	N-auc:0.93882	N-error:0.13772	E-rmse:0.40202	E-auc:0.81961	E-error:0.24512	N-mAcc:86.67400	E-mAcc:72.25300
+[2020-05-21 01:45:39] (01:36:50) train done.
+[2020-05-21 01:45:39] predict train:
+[2020-05-21 01:45:40]   accuracy   +: 87.407%
+[2020-05-21 01:45:40]   accuracy   -: 85.941%
+[2020-05-21 01:45:40]   accuracy avg: 86.674%
+[2020-05-21 01:45:40]   accuracy ALL: 86.227%
+[2020-05-21 01:45:40] predict test:
+[2020-05-21 01:45:40]   accuracy   +: 66.956%
+[2020-05-21 01:45:40]   accuracy   -: 77.551%
+[2020-05-21 01:45:40]   accuracy avg: 72.253%
+[2020-05-21 01:45:40]   accuracy ALL: 75.488%
+[2020-05-21 01:45:40] param:
+	{'booster': 'gbtree', 'max_depth': 7, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 3}
+	num_round: 60
+[0]	N-rmse:0.47178	N-auc:0.91228	N-error:0.16788	E-rmse:0.48157	E-auc:0.80574	E-error:0.29411	N-mAcc:84.67300	E-mAcc:70.32500
+[1]	N-rmse:0.44860	N-auc:0.91454	N-error:0.16719	E-rmse:0.46559	E-auc:0.80983	E-error:0.29066	N-mAcc:84.78500	E-mAcc:69.77000
+[2]	N-rmse:0.42897	N-auc:0.91607	N-error:0.16260	E-rmse:0.45352	E-auc:0.81127	E-error:0.27658	N-mAcc:84.84100	E-mAcc:70.44300
+[3]	N-rmse:0.41152	N-auc:0.91856	N-error:0.15983	E-rmse:0.44418	E-auc:0.81102	E-error:0.27788	N-mAcc:85.00000	E-mAcc:69.36300
+[4]	N-rmse:0.39597	N-auc:0.92160	N-error:0.15794	E-rmse:0.43682	E-auc:0.80917	E-error:0.28019	N-mAcc:85.26700	E-mAcc:69.42300
+[5]	N-rmse:0.38357	N-auc:0.92290	N-error:0.15653	E-rmse:0.42957	E-auc:0.81223	E-error:0.27542	N-mAcc:85.39900	E-mAcc:70.37600
+[6]	N-rmse:0.37317	N-auc:0.92329	N-error:0.15669	E-rmse:0.42320	E-auc:0.81388	E-error:0.27524	N-mAcc:85.32200	E-mAcc:69.75200
+[7]	N-rmse:0.36372	N-auc:0.92375	N-error:0.15603	E-rmse:0.41898	E-auc:0.81401	E-error:0.27426	N-mAcc:85.31500	E-mAcc:69.97700
+[8]	N-rmse:0.35690	N-auc:0.92464	N-error:0.15534	E-rmse:0.41550	E-auc:0.81467	E-error:0.27056	N-mAcc:85.41600	E-mAcc:70.51400
+[9]	N-rmse:0.34941	N-auc:0.92595	N-error:0.15472	E-rmse:0.41321	E-auc:0.81431	E-error:0.27062	N-mAcc:85.47300	E-mAcc:70.66900
+[10]	N-rmse:0.34478	N-auc:0.92671	N-error:0.15425	E-rmse:0.41051	E-auc:0.81643	E-error:0.27003	N-mAcc:85.51000	E-mAcc:70.70500
+[11]	N-rmse:0.33926	N-auc:0.92715	N-error:0.15408	E-rmse:0.40784	E-auc:0.81741	E-error:0.26925	N-mAcc:85.55500	E-mAcc:70.71000
+[12]	N-rmse:0.33581	N-auc:0.92769	N-error:0.15319	E-rmse:0.40570	E-auc:0.81823	E-error:0.26625	N-mAcc:85.60300	E-mAcc:70.73000
+[13]	N-rmse:0.33289	N-auc:0.92840	N-error:0.15282	E-rmse:0.40318	E-auc:0.82008	E-error:0.26555	N-mAcc:85.64500	E-mAcc:70.64700
+[14]	N-rmse:0.33009	N-auc:0.92878	N-error:0.15209	E-rmse:0.40215	E-auc:0.82171	E-error:0.26360	N-mAcc:85.74900	E-mAcc:71.01200
+[15]	N-rmse:0.32725	N-auc:0.92941	N-error:0.15130	E-rmse:0.40266	E-auc:0.81961	E-error:0.26416	N-mAcc:85.77900	E-mAcc:70.98700
+[16]	N-rmse:0.32567	N-auc:0.92985	N-error:0.15119	E-rmse:0.40146	E-auc:0.82160	E-error:0.26419	N-mAcc:85.79300	E-mAcc:71.02400
+[17]	N-rmse:0.32382	N-auc:0.93028	N-error:0.15088	E-rmse:0.40094	E-auc:0.82434	E-error:0.26363	N-mAcc:85.82100	E-mAcc:71.41000
+[18]	N-rmse:0.32250	N-auc:0.93069	N-error:0.15053	E-rmse:0.40041	E-auc:0.82427	E-error:0.26311	N-mAcc:85.83900	E-mAcc:71.42100
+[19]	N-rmse:0.32119	N-auc:0.93103	N-error:0.14998	E-rmse:0.39923	E-auc:0.82454	E-error:0.26032	N-mAcc:85.88000	E-mAcc:71.29900
+[20]	N-rmse:0.31936	N-auc:0.93191	N-error:0.14897	E-rmse:0.39999	E-auc:0.82374	E-error:0.25883	N-mAcc:86.03700	E-mAcc:71.51800
+[21]	N-rmse:0.31811	N-auc:0.93248	N-error:0.14861	E-rmse:0.39935	E-auc:0.82658	E-error:0.25733	N-mAcc:86.08500	E-mAcc:71.91900
+[22]	N-rmse:0.31646	N-auc:0.93321	N-error:0.14737	E-rmse:0.40016	E-auc:0.82531	E-error:0.25558	N-mAcc:86.16300	E-mAcc:71.89200
+[23]	N-rmse:0.31567	N-auc:0.93365	N-error:0.14672	E-rmse:0.39905	E-auc:0.82710	E-error:0.25451	N-mAcc:86.20500	E-mAcc:71.99500
+[24]	N-rmse:0.31459	N-auc:0.93413	N-error:0.14535	E-rmse:0.39775	E-auc:0.82891	E-error:0.25230	N-mAcc:86.30000	E-mAcc:72.11100
+[25]	N-rmse:0.31371	N-auc:0.93466	N-error:0.14466	E-rmse:0.39873	E-auc:0.82734	E-error:0.25196	N-mAcc:86.35400	E-mAcc:72.13500
+[26]	N-rmse:0.31298	N-auc:0.93509	N-error:0.14378	E-rmse:0.39849	E-auc:0.82755	E-error:0.25073	N-mAcc:86.41000	E-mAcc:72.15200
+[27]	N-rmse:0.31220	N-auc:0.93541	N-error:0.14299	E-rmse:0.39856	E-auc:0.82847	E-error:0.24984	N-mAcc:86.45400	E-mAcc:72.29400
+[28]	N-rmse:0.31162	N-auc:0.93578	N-error:0.14231	E-rmse:0.39983	E-auc:0.82705	E-error:0.25025	N-mAcc:86.50700	E-mAcc:72.34000
+[29]	N-rmse:0.31117	N-auc:0.93606	N-error:0.14173	E-rmse:0.39981	E-auc:0.82756	E-error:0.24979	N-mAcc:86.53900	E-mAcc:72.41400
+[30]	N-rmse:0.31048	N-auc:0.93655	N-error:0.14149	E-rmse:0.40019	E-auc:0.82610	E-error:0.25002	N-mAcc:86.57400	E-mAcc:72.33700
+[31]	N-rmse:0.30978	N-auc:0.93700	N-error:0.14082	E-rmse:0.40094	E-auc:0.82475	E-error:0.24985	N-mAcc:86.61400	E-mAcc:72.27000
+[32]	N-rmse:0.30937	N-auc:0.93724	N-error:0.14041	E-rmse:0.40126	E-auc:0.82476	E-error:0.25001	N-mAcc:86.63900	E-mAcc:72.26100
+[33]	N-rmse:0.30880	N-auc:0.93761	N-error:0.13986	E-rmse:0.40153	E-auc:0.82358	E-error:0.24988	N-mAcc:86.68500	E-mAcc:72.22200
+[34]	N-rmse:0.30850	N-auc:0.93781	N-error:0.13957	E-rmse:0.40159	E-auc:0.82358	E-error:0.25003	N-mAcc:86.70100	E-mAcc:72.21200
+[35]	N-rmse:0.30825	N-auc:0.93795	N-error:0.13945	E-rmse:0.40198	E-auc:0.82310	E-error:0.25029	N-mAcc:86.70900	E-mAcc:72.18600
+[36]	N-rmse:0.30788	N-auc:0.93828	N-error:0.13917	E-rmse:0.40240	E-auc:0.82316	E-error:0.24987	N-mAcc:86.73800	E-mAcc:72.27500
+[37]	N-rmse:0.30702	N-auc:0.93882	N-error:0.13804	E-rmse:0.40255	E-auc:0.82258	E-error:0.24835	N-mAcc:86.80300	E-mAcc:72.37300
+[38]	N-rmse:0.30651	N-auc:0.93918	N-error:0.13733	E-rmse:0.40230	E-auc:0.82318	E-error:0.24809	N-mAcc:86.86000	E-mAcc:72.40600
+[39]	N-rmse:0.30629	N-auc:0.93934	N-error:0.13708	E-rmse:0.40265	E-auc:0.82332	E-error:0.24822	N-mAcc:86.87900	E-mAcc:72.41500
+[40]	N-rmse:0.30600	N-auc:0.93950	N-error:0.13671	E-rmse:0.40268	E-auc:0.82356	E-error:0.24829	N-mAcc:86.90400	E-mAcc:72.42400
+[41]	N-rmse:0.30543	N-auc:0.93992	N-error:0.13612	E-rmse:0.40363	E-auc:0.82160	E-error:0.24894	N-mAcc:86.94400	E-mAcc:72.28300
+[42]	N-rmse:0.30514	N-auc:0.94010	N-error:0.13587	E-rmse:0.40374	E-auc:0.82141	E-error:0.24893	N-mAcc:86.97000	E-mAcc:72.28600
+[43]	N-rmse:0.30459	N-auc:0.94045	N-error:0.13522	E-rmse:0.40417	E-auc:0.82090	E-error:0.24865	N-mAcc:87.00900	E-mAcc:72.30600
+[44]	N-rmse:0.30378	N-auc:0.94096	N-error:0.13428	E-rmse:0.40527	E-auc:0.81861	E-error:0.24899	N-mAcc:87.06900	E-mAcc:72.17900
+[45]	N-rmse:0.30296	N-auc:0.94143	N-error:0.13350	E-rmse:0.40562	E-auc:0.81687	E-error:0.24822	N-mAcc:87.10800	E-mAcc:72.20300
+[46]	N-rmse:0.30255	N-auc:0.94171	N-error:0.13313	E-rmse:0.40582	E-auc:0.81671	E-error:0.24821	N-mAcc:87.13100	E-mAcc:72.19200
+[47]	N-rmse:0.30151	N-auc:0.94236	N-error:0.13207	E-rmse:0.40602	E-auc:0.81513	E-error:0.24659	N-mAcc:87.19700	E-mAcc:72.32400
+[48]	N-rmse:0.30111	N-auc:0.94261	N-error:0.13165	E-rmse:0.40591	E-auc:0.81536	E-error:0.24641	N-mAcc:87.22100	E-mAcc:72.31500
+[49]	N-rmse:0.30081	N-auc:0.94291	N-error:0.13144	E-rmse:0.40688	E-auc:0.81454	E-error:0.24708	N-mAcc:87.25900	E-mAcc:72.29200
+[50]	N-rmse:0.30059	N-auc:0.94302	N-error:0.13110	E-rmse:0.40703	E-auc:0.81460	E-error:0.24729	N-mAcc:87.27900	E-mAcc:72.28200
+[51]	N-rmse:0.30022	N-auc:0.94332	N-error:0.13082	E-rmse:0.40714	E-auc:0.81451	E-error:0.24738	N-mAcc:87.31600	E-mAcc:72.28400
+[52]	N-rmse:0.29959	N-auc:0.94378	N-error:0.13024	E-rmse:0.40785	E-auc:0.81336	E-error:0.24779	N-mAcc:87.36400	E-mAcc:72.24300
+[53]	N-rmse:0.29907	N-auc:0.94413	N-error:0.12966	E-rmse:0.40805	E-auc:0.81247	E-error:0.24780	N-mAcc:87.41300	E-mAcc:72.21200
+[54]	N-rmse:0.29880	N-auc:0.94430	N-error:0.12941	E-rmse:0.40840	E-auc:0.81100	E-error:0.24726	N-mAcc:87.42800	E-mAcc:72.23600
+[55]	N-rmse:0.29802	N-auc:0.94488	N-error:0.12872	E-rmse:0.40954	E-auc:0.80865	E-error:0.24710	N-mAcc:87.48100	E-mAcc:72.26700
+[56]	N-rmse:0.29775	N-auc:0.94500	N-error:0.12836	E-rmse:0.40970	E-auc:0.80861	E-error:0.24696	N-mAcc:87.49600	E-mAcc:72.28500
+[57]	N-rmse:0.29742	N-auc:0.94516	N-error:0.12793	E-rmse:0.40974	E-auc:0.80847	E-error:0.24692	N-mAcc:87.51500	E-mAcc:72.27000
+[58]	N-rmse:0.29706	N-auc:0.94550	N-error:0.12769	E-rmse:0.40991	E-auc:0.80826	E-error:0.24685	N-mAcc:87.55300	E-mAcc:72.29100
+[59]	N-rmse:0.29663	N-auc:0.94580	N-error:0.12725	E-rmse:0.40991	E-auc:0.80838	E-error:0.24682	N-mAcc:87.59300	E-mAcc:72.29600
+[2020-05-21 03:36:34] (01:50:54) train done.
+[2020-05-21 03:36:35] predict train:
+[2020-05-21 03:36:36]   accuracy   +: 88.114%
+[2020-05-21 03:36:36]   accuracy   -: 87.072%
+[2020-05-21 03:36:36]   accuracy avg: 87.593%
+[2020-05-21 03:36:36]   accuracy ALL: 87.275%
+[2020-05-21 03:36:36] predict test:
+[2020-05-21 03:36:36]   accuracy   +: 67.345%
+[2020-05-21 03:36:36]   accuracy   -: 77.246%
+[2020-05-21 03:36:36]   accuracy avg: 72.296%
+[2020-05-21 03:36:36]   accuracy ALL: 75.319%
+[2020-05-21 03:36:36] param:
+	{'booster': 'gbtree', 'max_depth': 8, 'eta': 0.1, 'silent': 1, 'objective': 'binary:logistic', 'nthread': 15, 'eval_metric': ['rmse', 'auc', 'error'], 'scale_pos_weight': 3}
+	num_round: 60
+[0]	N-rmse:0.47118	N-auc:0.91905	N-error:0.15197	E-rmse:0.48152	E-auc:0.78605	E-error:0.26097	N-mAcc:84.93700	E-mAcc:69.39500
+[1]	N-rmse:0.44676	N-auc:0.92140	N-error:0.15347	E-rmse:0.46661	E-auc:0.79258	E-error:0.27130	N-mAcc:85.29500	E-mAcc:69.28100
+[2]	N-rmse:0.42623	N-auc:0.92404	N-error:0.15427	E-rmse:0.45457	E-auc:0.79353	E-error:0.27125	N-mAcc:85.41800	E-mAcc:70.01500
+[3]	N-rmse:0.40787	N-auc:0.92710	N-error:0.15240	E-rmse:0.44551	E-auc:0.79336	E-error:0.27337	N-mAcc:85.67700	E-mAcc:70.26700
+[4]	N-rmse:0.39233	N-auc:0.92887	N-error:0.15064	E-rmse:0.43739	E-auc:0.79227	E-error:0.27044	N-mAcc:85.90000	E-mAcc:69.56600
+[5]	N-rmse:0.37940	N-auc:0.92972	N-error:0.14872	E-rmse:0.43084	E-auc:0.79603	E-error:0.26819	N-mAcc:85.98500	E-mAcc:70.01400
+[6]	N-rmse:0.36838	N-auc:0.93059	N-error:0.14883	E-rmse:0.42591	E-auc:0.79833	E-error:0.27039	N-mAcc:86.01300	E-mAcc:70.05900
+[7]	N-rmse:0.35830	N-auc:0.93175	N-error:0.14764	E-rmse:0.42195	E-auc:0.79958	E-error:0.26680	N-mAcc:86.07000	E-mAcc:70.40100
+[8]	N-rmse:0.35053	N-auc:0.93244	N-error:0.14669	E-rmse:0.41858	E-auc:0.80110	E-error:0.26625	N-mAcc:86.11300	E-mAcc:70.15800
+[9]	N-rmse:0.34350	N-auc:0.93312	N-error:0.14589	E-rmse:0.41600	E-auc:0.80010	E-error:0.26347	N-mAcc:86.16100	E-mAcc:70.18900
+[10]	N-rmse:0.33778	N-auc:0.93398	N-error:0.14481	E-rmse:0.41472	E-auc:0.80089	E-error:0.26409	N-mAcc:86.21800	E-mAcc:70.23200
+[11]	N-rmse:0.33250	N-auc:0.93467	N-error:0.14408	E-rmse:0.41368	E-auc:0.80042	E-error:0.26341	N-mAcc:86.27600	E-mAcc:70.28800
+[12]	N-rmse:0.32874	N-auc:0.93519	N-error:0.14294	E-rmse:0.41187	E-auc:0.80266	E-error:0.26095	N-mAcc:86.34800	E-mAcc:70.43700
+[13]	N-rmse:0.32542	N-auc:0.93547	N-error:0.14246	E-rmse:0.41019	E-auc:0.80595	E-error:0.25916	N-mAcc:86.46900	E-mAcc:70.66100
+[14]	N-rmse:0.32249	N-auc:0.93592	N-error:0.14195	E-rmse:0.40956	E-auc:0.80543	E-error:0.25968	N-mAcc:86.50400	E-mAcc:70.51900
+[15]	N-rmse:0.31986	N-auc:0.93646	N-error:0.14116	E-rmse:0.40876	E-auc:0.80690	E-error:0.25918	N-mAcc:86.54800	E-mAcc:70.60300
+[16]	N-rmse:0.31801	N-auc:0.93690	N-error:0.14017	E-rmse:0.40858	E-auc:0.80593	E-error:0.25844	N-mAcc:86.60500	E-mAcc:70.59400
+[17]	N-rmse:0.31562	N-auc:0.93746	N-error:0.13927	E-rmse:0.40918	E-auc:0.80458	E-error:0.25864	N-mAcc:86.66800	E-mAcc:70.64300
+[18]	N-rmse:0.31417	N-auc:0.93778	N-error:0.13874	E-rmse:0.40812	E-auc:0.80672	E-error:0.25826	N-mAcc:86.69800	E-mAcc:70.68500
+[19]	N-rmse:0.31259	N-auc:0.93836	N-error:0.13831	E-rmse:0.40738	E-auc:0.80903	E-error:0.25853	N-mAcc:86.75000	E-mAcc:70.71600
+[20]	N-rmse:0.31032	N-auc:0.93903	N-error:0.13724	E-rmse:0.40803	E-auc:0.80746	E-error:0.25699	N-mAcc:86.82000	E-mAcc:70.77800
+[21]	N-rmse:0.30878	N-auc:0.93964	N-error:0.13639	E-rmse:0.40730	E-auc:0.80954	E-error:0.25555	N-mAcc:86.89100	E-mAcc:70.97700
+[22]	N-rmse:0.30784	N-auc:0.94013	N-error:0.13580	E-rmse:0.40699	E-auc:0.81113	E-error:0.25482	N-mAcc:86.95300	E-mAcc:71.14500
+[23]	N-rmse:0.30669	N-auc:0.94065	N-error:0.13486	E-rmse:0.40811	E-auc:0.80993	E-error:0.25487	N-mAcc:87.01400	E-mAcc:71.22500
+[24]	N-rmse:0.30574	N-auc:0.94094	N-error:0.13442	E-rmse:0.40795	E-auc:0.81046	E-error:0.25474	N-mAcc:87.05900	E-mAcc:71.27400
+[25]	N-rmse:0.30496	N-auc:0.94126	N-error:0.13381	E-rmse:0.40787	E-auc:0.81083	E-error:0.25441	N-mAcc:87.10300	E-mAcc:71.29500
+[26]	N-rmse:0.30431	N-auc:0.94160	N-error:0.13354	E-rmse:0.40812	E-auc:0.81117	E-error:0.25383	N-mAcc:87.14300	E-mAcc:71.41500
+[27]	N-rmse:0.30356	N-auc:0.94190	N-error:0.13315	E-rmse:0.40862	E-auc:0.80944	E-error:0.25375	N-mAcc:87.17000	E-mAcc:71.39600
+[28]	N-rmse:0.30291	N-auc:0.94226	N-error:0.13274	E-rmse:0.40879	E-auc:0.80934	E-error:0.25292	N-mAcc:87.20400	E-mAcc:71.51700
+[29]	N-rmse:0.30250	N-auc:0.94240	N-error:0.13243	E-rmse:0.40861	E-auc:0.81018	E-error:0.25275	N-mAcc:87.22200	E-mAcc:71.54000
+[30]	N-rmse:0.30199	N-auc:0.94269	N-error:0.13204	E-rmse:0.40852	E-auc:0.81061	E-error:0.25279	N-mAcc:87.25700	E-mAcc:71.53100
+[31]	N-rmse:0.30170	N-auc:0.94287	N-error:0.13189	E-rmse:0.40853	E-auc:0.81159	E-error:0.25335	N-mAcc:87.28300	E-mAcc:71.54200
+[32]	N-rmse:0.30135	N-auc:0.94310	N-error:0.13163	E-rmse:0.40851	E-auc:0.81207	E-error:0.25360	N-mAcc:87.31400	E-mAcc:71.53700
+[33]	N-rmse:0.30090	N-auc:0.94341	N-error:0.13142	E-rmse:0.40997	E-auc:0.80915	E-error:0.25516	N-mAcc:87.34800	E-mAcc:71.33900
+[34]	N-rmse:0.30020	N-auc:0.94381	N-error:0.13082	E-rmse:0.41002	E-auc:0.80804	E-error:0.25344	N-mAcc:87.39200	E-mAcc:71.44000
+[35]	N-rmse:0.29980	N-auc:0.94413	N-error:0.13066	E-rmse:0.41078	E-auc:0.80729	E-error:0.25327	N-mAcc:87.42100	E-mAcc:71.53300
+[36]	N-rmse:0.29943	N-auc:0.94438	N-error:0.13024	E-rmse:0.41110	E-auc:0.80714	E-error:0.25327	N-mAcc:87.46200	E-mAcc:71.55700
+[37]	N-rmse:0.29906	N-auc:0.94467	N-error:0.12990	E-rmse:0.41150	E-auc:0.80681	E-error:0.25341	N-mAcc:87.49900	E-mAcc:71.56500
+[38]	N-rmse:0.29877	N-auc:0.94484	N-error:0.12953	E-rmse:0.41133	E-auc:0.80716	E-error:0.25287	N-mAcc:87.52700	E-mAcc:71.61600
+[39]	N-rmse:0.29847	N-auc:0.94512	N-error:0.12938	E-rmse:0.41165	E-auc:0.80743	E-error:0.25262	N-mAcc:87.56000	E-mAcc:71.72000
+[40]	N-rmse:0.29814	N-auc:0.94535	N-error:0.12909	E-rmse:0.41186	E-auc:0.80729	E-error:0.25285	N-mAcc:87.59100	E-mAcc:71.70500
+[41]	N-rmse:0.29770	N-auc:0.94562	N-error:0.12870	E-rmse:0.41186	E-auc:0.80763	E-error:0.25282	N-mAcc:87.62100	E-mAcc:71.72500
+[42]	N-rmse:0.29745	N-auc:0.94589	N-error:0.12853	E-rmse:0.41242	E-auc:0.80711	E-error:0.25304	N-mAcc:87.64400	E-mAcc:71.71200
+[43]	N-rmse:0.29717	N-auc:0.94609	N-error:0.12831	E-rmse:0.41289	E-auc:0.80637	E-error:0.25356	N-mAcc:87.66000	E-mAcc:71.64700
+[44]	N-rmse:0.29682	N-auc:0.94634	N-error:0.12807	E-rmse:0.41304	E-auc:0.80602	E-error:0.25355	N-mAcc:87.68700	E-mAcc:71.66500
+[45]	N-rmse:0.29616	N-auc:0.94670	N-error:0.12738	E-rmse:0.41382	E-auc:0.80482	E-error:0.25327	N-mAcc:87.73500	E-mAcc:71.65900
+[46]	N-rmse:0.29495	N-auc:0.94749	N-error:0.12639	E-rmse:0.41407	E-auc:0.80320	E-error:0.25177	N-mAcc:87.80400	E-mAcc:71.75900
+[47]	N-rmse:0.29440	N-auc:0.94780	N-error:0.12583	E-rmse:0.41474	E-auc:0.80173	E-error:0.25137	N-mAcc:87.84300	E-mAcc:71.77400
+[48]	N-rmse:0.29373	N-auc:0.94821	N-error:0.12519	E-rmse:0.41521	E-auc:0.80028	E-error:0.25088	N-mAcc:87.88700	E-mAcc:71.79900
+[49]	N-rmse:0.29323	N-auc:0.94848	N-error:0.12459	E-rmse:0.41536	E-auc:0.80020	E-error:0.25052	N-mAcc:87.92400	E-mAcc:71.81600
+[50]	N-rmse:0.29271	N-auc:0.94883	N-error:0.12413	E-rmse:0.41715	E-auc:0.79612	E-error:0.25185	N-mAcc:87.95500	E-mAcc:71.61800
+[51]	N-rmse:0.29170	N-auc:0.94949	N-error:0.12318	E-rmse:0.41740	E-auc:0.79523	E-error:0.25155	N-mAcc:88.03300	E-mAcc:71.62200
+[52]	N-rmse:0.29144	N-auc:0.94969	N-error:0.12298	E-rmse:0.41778	E-auc:0.79500	E-error:0.25173	N-mAcc:88.05300	E-mAcc:71.62700
+[53]	N-rmse:0.29110	N-auc:0.94993	N-error:0.12269	E-rmse:0.41781	E-auc:0.79512	E-error:0.25166	N-mAcc:88.08700	E-mAcc:71.63100
+[54]	N-rmse:0.29081	N-auc:0.95007	N-error:0.12242	E-rmse:0.41758	E-auc:0.79521	E-error:0.25104	N-mAcc:88.10200	E-mAcc:71.68100
+[55]	N-rmse:0.29020	N-auc:0.95044	N-error:0.12180	E-rmse:0.41750	E-auc:0.79455	E-error:0.25049	N-mAcc:88.15400	E-mAcc:71.67600
+[56]	N-rmse:0.29002	N-auc:0.95059	N-error:0.12165	E-rmse:0.41790	E-auc:0.79395	E-error:0.25058	N-mAcc:88.17200	E-mAcc:71.66900
+[57]	N-rmse:0.28958	N-auc:0.95079	N-error:0.12119	E-rmse:0.41802	E-auc:0.79353	E-error:0.25051	N-mAcc:88.19000	E-mAcc:71.66400
+[58]	N-rmse:0.28913	N-auc:0.95105	N-error:0.12081	E-rmse:0.41853	E-auc:0.79275	E-error:0.25062	N-mAcc:88.21400	E-mAcc:71.66300
+[59]	N-rmse:0.28896	N-auc:0.95122	N-error:0.12072	E-rmse:0.41853	E-auc:0.79295	E-error:0.25058	N-mAcc:88.23500	E-mAcc:71.67300
+[2020-05-21 05:45:13] (02:08:37) train done.
+[2020-05-21 05:45:14] predict train:
+[2020-05-21 05:45:15]   accuracy   +: 88.737%
+[2020-05-21 05:45:15]   accuracy   -: 87.732%
+[2020-05-21 05:45:15]   accuracy avg: 88.235%
+[2020-05-21 05:45:15]   accuracy ALL: 87.928%
+[2020-05-21 05:45:15] predict test:
+[2020-05-21 05:45:15]   accuracy   +: 66.319%
+[2020-05-21 05:45:15]   accuracy   -: 77.027%
+[2020-05-21 05:45:15]   accuracy avg: 71.673%
+[2020-05-21 05:45:15]   accuracy ALL: 74.942%
+[2020-05-21 05:45:21] (08:16:04) done
