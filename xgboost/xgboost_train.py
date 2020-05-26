@@ -16,6 +16,7 @@ file_col_names = "./columns.txt"
 file_train  = path_data + "train.samp"
 file_train  = path_data + "train.csv"
 file_tests  = path_data + "tests.csv"
+file_output = path_data + "pred.txt"
 file_model  = './data/model.%s' % ver
 file_fscore = "./data/model.%s.score" % ver
 loger = Loger()
@@ -69,7 +70,8 @@ def load_DMatrix(file_name, col_names, s_name):
     log("# %s   -: (%5.2f%%)   %s " % (s_name, 100. * num_0/dmatrix.num_row(), num_0))
     return dmatrix
 
-def output_predict(bst, dtrain, f_output):
+def output_predict(flag, bst, dtrain, f_output):
+    log("predict %s:" % flag)
     preds  = bst.predict(dtrain)
     labels = dtrain.get_label()
     """
@@ -96,7 +98,6 @@ def main():
     evallist = [(dtrain, 'R'),  (dtests, 'E')]
     log("param:\n\t" + str(param) + " num_round: " + str(num_round))
     
-    # bst = xgb.train(param, dtrain, num_round, evallist)
     bst = xgb.train(param, dtrain, num_round, evallist, feval=acc_avg)
     loger.logu("train done.")
     bst.save_model(file_model + '.dat')
@@ -107,12 +108,27 @@ def main():
         for k,v in list_score:
             wf.write("%12.5f\t%s\n" % (v,k))
     
-    log("predict train:")
-    output_predict(bst, dtrain,  path_data + '/pred.train.txt')
-    log("predict test:")
-    output_predict(bst, dtests,  path_data + '/pred.tests.txt')
+    output_predict('train', bst, dtrain,  path_data + '/pred.train.txt')
+    output_predict('test',  bst, dtests,  path_data + '/pred.tests.txt')
 
     
+def predict():
+    cols = load_col_names()
+    dtests = load_DMatrix(file_tests, cols, 'tests')
+    model = xgb.Booster(model_file=file_model + '.dat')
+    best_round = 10                                             # 使用最佳的一轮中间结果.需人工选择
+    preds  = model.predict(dtests, ntree_limit=best_round + 1)  #+1之后跟训练过程的编号一致
+    flag, acc = acc_avg(preds, dtests)
+    print("eval acc: %.5f" % acc)
+    labels = dtests.get_label()
+    assert len(preds) == len(labels)
+    num_pos = sum(int(x >= 0.5) for x in preds)
+    loger.logu("# predict +: %s/%s, %s" % (num_pos, len(preds), 1. * num_pos / len(preds)))
+    wf = open(f_output, 'w')
+    for i, p in enumerate(preds):
+        wf.write("%s\t%s\n" % (i,p))
+    wf.close()
+
 if __name__ == "__main__":
     loger0 = Loger()
     loger0.log("begin...")
